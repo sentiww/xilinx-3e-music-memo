@@ -1,3 +1,3 @@
+vhdl work "rs232_keyboard_to_frequency.vhd"
 vhdl work "frequency_generator.vhd"
-vhdl work "button_keyboard.vhd"
 vhdl work "main_schematic.vhf"

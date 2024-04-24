@@ -9,31 +9,33 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Wed Apr 24 21:22:29 2024
+Mapped Date    : Wed Apr 24 21:34:52 2024
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    0
+Number of warnings:    1
 Logic Utilization:
-  Number of Slice Flip Flops:           123 out of   9,312    1%
-  Number of 4 input LUTs:                81 out of   9,312    1%
+  Total Number Slice Registers:         227 out of   9,312    2%
+    Number used as Flip Flops:          214
+    Number used as Latches:              13
+  Number of 4 input LUTs:               169 out of   9,312    1%
 Logic Distribution:
-  Number of occupied Slices:             89 out of   4,656    1%
-    Number of Slices containing only related logic:      89 out of      89 100%
-    Number of Slices containing unrelated logic:          0 out of      89   0%
+  Number of occupied Slices:            186 out of   4,656    3%
+    Number of Slices containing only related logic:     186 out of     186 100%
+    Number of Slices containing unrelated logic:          0 out of     186   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         143 out of   9,312    1%
-    Number used as logic:                81
-    Number used as a route-thru:         62
+  Total Number of 4 input LUTs:         254 out of   9,312    2%
+    Number used as logic:               169
+    Number used as a route-thru:         85
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 17 out of     232    7%
+  Number of bonded IOBs:                 18 out of     232    7%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                2.63
+Average Fanout of Non-Clock Nets:                2.72
 
 Peak Memory Usage:  4405 MB
 Total REAL time to MAP completion:  1 secs 
@@ -78,6 +80,9 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:PhysDesignRules:372 - Gated clock. Clock net XLXN_65 is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
@@ -90,7 +95,7 @@ INFO:LIT:244 - All of the single ended outputs in this design are using slew
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  14 block(s) optimized away
+  18 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -119,6 +124,10 @@ FDE 		XLXI_1/DATASys_7
    optimized to 0
 GND 		XLXI_1/XST_GND
 VCC 		XLXI_1/XST_VCC
+GND 		XLXI_10/XST_GND
+VCC 		XLXI_10/XST_VCC
+GND 		XLXI_11/XST_GND
+VCC 		XLXI_11/XST_VCC
 GND 		XST_GND
 VCC 		XST_VCC
 
@@ -134,21 +143,22 @@ Section 6 - IOB Properties
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | AD_CONV                            | IOB              | OUTPUT    | LVCMOS33             |       | 6        | SLOW |              |          | 0 / 0    |
 | AMP_CS                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
-| BTN0                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
-| BTN1                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
-| BTN2                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
-| BTN3                               | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLUP   | 0 / 0    |
 | Busy                               | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
 | Clk_50MHz                          | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
 | DAC_CLR                            | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | DAC_CS                             | IOB              | OUTPUT    | LVCMOS33             |       | 8        | SLOW |              |          | 0 / 0    |
 | FPGA_INIT_B                        | IOB              | OUTPUT    | LVCMOS33             |       | 4        | SLOW |              |          | 0 / 0    |
+| PS2_Clk                            | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
+| PS2_Data                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | RESET                              | IBUF             | INPUT     | LVTTL                |       |          |      |              | PULLDOWN | 0 / 0    |
+| RS232_RxD                          | IBUF             | INPUT     | LVTTL                |       |          |      |              |          | 0 / 0    |
+| RS232_TxD                          | IOB              | OUTPUT    | LVTTL                |       | 8        | SLOW |              |          | 0 / 0    |
 | SF_CE0                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | SPI_MISO                           | IBUF             | INPUT     | LVCMOS33             |       |          |      |              |          | 0 / 0    |
 | SPI_MOSI                           | IOB              | OUTPUT    | LVCMOS33             |       | 6        | SLOW |              |          | 0 / 0    |
 | SPI_SCK                            | IOB              | OUTPUT    | LVCMOS33             |       | 6        | SLOW |              |          | 0 / 0    |
 | SPI_SS_B                           | IOB              | OUTPUT    | LVCMOS33             |       | 6        | SLOW |              |          | 0 / 0    |
+| TxBusyLed                          | IOB              | OUTPUT    | LVTTL                |       | 4        | SLOW |              |          | 0 / 0    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

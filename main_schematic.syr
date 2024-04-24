@@ -105,13 +105,13 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.vhd" in Library work.
-Entity <frequency_generator> compiled.
-Entity <frequency_generator> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd" in Library work.
-Entity <button_keyboard> compiled.
-Entity <button_keyboard> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity frequency_generator is up to date.
+Compiling vhdl file "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.vhd" in Library work.
+Entity <rs232_keyboard_to_frequency> compiled.
+Entity <rs232_keyboard_to_frequency> (Architecture <Behavioral>) compiled.
 Compiling vhdl file "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf" in Library work.
-Architecture behavioral of Entity main_schematic is up to date.
+Entity <main_schematic> compiled.
+Entity <main_schematic> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -120,21 +120,25 @@ Analyzing hierarchy for entity <main_schematic> in library <work> (architecture 
 
 Analyzing hierarchy for entity <frequency_generator> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <button_keyboard> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <rs232_keyboard_to_frequency> in library <work> (architecture <Behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <main_schematic> in library <work> (Architecture <behavioral>).
-WARNING:Xst:2211 - "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf" line 95: Instantiating black box module <DACWrite>.
+WARNING:Xst:2211 - "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf" line 119: Instantiating black box module <DACWrite>.
+WARNING:Xst:2211 - "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf" line 146: Instantiating black box module <RS232>.
+WARNING:Xst:2211 - "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf" line 158: Instantiating black box module <PS2_Rx>.
 Entity <main_schematic> analyzed. Unit <main_schematic> generated.
 
 Analyzing Entity <frequency_generator> in library <work> (Architecture <behavioral>).
 Entity <frequency_generator> analyzed. Unit <frequency_generator> generated.
 
-Analyzing Entity <button_keyboard> in library <work> (Architecture <behavioral>).
-Entity <button_keyboard> analyzed. Unit <button_keyboard> generated.
+Analyzing Entity <rs232_keyboard_to_frequency> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:819 - "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.vhd" line 43: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ascii>
+Entity <rs232_keyboard_to_frequency> analyzed. Unit <rs232_keyboard_to_frequency> generated.
 
 
 =========================================================================
@@ -158,14 +162,10 @@ WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and l
 Unit <frequency_generator> synthesized.
 
 
-Synthesizing Unit <button_keyboard>.
-    Related source file is "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd".
-    Found 16x16-bit ROM for signal <frequency$mux0001> created at line 52.
-    Found 16-bit register for signal <frequency>.
-    Summary:
-	inferred   1 ROM(s).
-	inferred  16 D-type flip-flop(s).
-Unit <button_keyboard> synthesized.
+Synthesizing Unit <rs232_keyboard_to_frequency>.
+    Related source file is "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.vhd".
+WARNING:Xst:737 - Found 16-bit latch for signal <frequencyModCount>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+Unit <rs232_keyboard_to_frequency> synthesized.
 
 
 Synthesizing Unit <main_schematic>.
@@ -177,13 +177,12 @@ Unit <main_schematic> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 16x16-bit ROM                                         : 1
 # Counters                                             : 2
  32-bit up counter                                     : 2
-# Registers                                            : 2
+# Registers                                            : 1
  1-bit register                                        : 1
- 16-bit register                                       : 1
+# Latches                                              : 1
+ 16-bit latch                                          : 1
 # Comparators                                          : 1
  32-bit comparator greatequal                          : 1
 
@@ -194,22 +193,25 @@ Macro Statistics
 =========================================================================
 
 Reading core <DACWrite.ngc>.
+Reading core <RS232.ngc>.
+Reading core <PS2_Rx.ngc>.
 Loading core <DACWrite> for timing and area information for instance <XLXI_1>.
-
-Synthesizing (advanced) Unit <button_keyboard>.
-INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_frequency_mux0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
-Unit <button_keyboard> synthesized (advanced).
+Loading core <RS232> for timing and area information for instance <XLXI_10>.
+Loading core <PS2_Rx> for timing and area information for instance <XLXI_11>.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <15>. This FF/Latch will be trimmed during the optimization process.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 1
- 16x16-bit ROM                                         : 1
 # Counters                                             : 2
  32-bit up counter                                     : 2
-# Registers                                            : 17
- Flip-Flops                                            : 17
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Latches                                              : 1
+ 16-bit latch                                          : 1
 # Comparators                                          : 1
  32-bit comparator greatequal                          : 1
 
@@ -218,17 +220,16 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <frequency_13> (without init value) has a constant value of 0 in block <button_keyboard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <frequency_14> (without init value) has a constant value of 0 in block <button_keyboard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <frequency_15> (without init value) has a constant value of 0 in block <button_keyboard>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <15> in Unit <LPM_LATCH_1> is equivalent to the following 2 FFs/Latches, which will be removed : <14> <13> 
+WARNING:Xst:1710 - FF/Latch <15> (without init value) has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <main_schematic> ...
 
-Optimizing unit <button_keyboard> ...
+Optimizing unit <rs232_keyboard_to_frequency> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block main_schematic, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block main_schematic, actual ratio is 3.
 
 Final Macro Processing ...
 
@@ -236,8 +237,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 78
- Flip-Flops                                            : 78
+# Registers                                            : 65
+ Flip-Flops                                            : 65
 
 =========================================================================
 
@@ -263,33 +264,37 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 17
+# IOs                              : 18
 
 Cell Usage :
-# BELS                             : 308
-#      GND                         : 2
-#      INV                         : 12
-#      LUT1                        : 62
-#      LUT2                        : 20
-#      LUT3                        : 24
+# BELS                             : 486
+#      GND                         : 4
+#      INV                         : 24
+#      LUT1                        : 85
+#      LUT2                        : 35
+#      LUT2_L                      : 1
+#      LUT3                        : 54
 #      LUT3_D                      : 1
-#      LUT4                        : 26
-#      LUT4_D                      : 3
-#      MUXCY                       : 92
-#      VCC                         : 2
-#      XORCY                       : 64
-# FlipFlops/Latches                : 133
-#      FD                          : 19
-#      FDE                         : 41
-#      FDR                         : 38
-#      FDRE                        : 32
-#      FDRS                        : 1
-#      FDRSE                       : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 56
+#      LUT4_D                      : 7
+#      LUT4_L                      : 4
+#      MUXCY                       : 115
+#      MUXF5                       : 5
+#      VCC                         : 4
+#      XORCY                       : 90
+# FlipFlops/Latches                : 237
+#      FD                          : 25
+#      FDE                         : 88
+#      FDR                         : 57
+#      FDRE                        : 51
+#      FDRSE                       : 3
+#      LD                          : 13
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 16
-#      IBUF                        : 6
-#      OBUF                        : 10
+# IO Buffers                       : 17
+#      IBUF                        : 5
+#      OBUF                        : 12
 =========================================================================
 
 Device utilization summary:
@@ -297,11 +302,11 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                       91  out of   4656     1%  
- Number of Slice Flip Flops:            133  out of   9312     1%  
- Number of 4 input LUTs:                148  out of   9312     1%  
- Number of IOs:                          17
- Number of bonded IOBs:                  17  out of    232     7%  
+ Number of Slices:                      168  out of   4656     3%  
+ Number of Slice Flip Flops:            237  out of   9312     2%  
+ Number of 4 input LUTs:                268  out of   9312     2%  
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    232     7%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -322,11 +327,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-Clk_50MHz                          | BUFGP                  | 133   |
------------------------------------+------------------------+-------+
+---------------------------------------------------+--------------------------------------+-------+
+Clock Signal                                       | Clock buffer(FF name)                | Load  |
+---------------------------------------------------+--------------------------------------+-------+
+Clk_50MHz                                          | BUFGP                                | 224   |
+XLXI_10/RxRdy(XLXI_10/ResRxRdy/Mxor_DOut_Result1:O)| NONE(*)(XLXI_19/frequencyModCount_12)| 13    |
+---------------------------------------------------+--------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -336,10 +346,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 7.104ns (Maximum Frequency: 140.775MHz)
-   Minimum input arrival time before clock: 4.076ns
+   Minimum period: 7.035ns (Maximum Frequency: 142.156MHz)
+   Minimum input arrival time before clock: 4.627ns
    Maximum output required time after clock: 5.620ns
-   Maximum combinational path delay: 7.147ns
+   Maximum combinational path delay: 7.176ns
 
 Timing Detail:
 --------------
@@ -347,21 +357,21 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_50MHz'
-  Clock period: 7.104ns (frequency: 140.775MHz)
-  Total number of paths / destination ports: 4585 / 248
+  Clock period: 7.035ns (frequency: 142.156MHz)
+  Total number of paths / destination ports: 5234 / 452
 -------------------------------------------------------------------------
-Delay:               7.104ns (Levels of Logic = 23)
-  Source:            XLXI_9/frequency_0 (FF)
+Delay:               7.035ns (Levels of Logic = 23)
+  Source:            XLXI_7/modCount_0 (FF)
   Destination:       XLXI_7/startInternal_0 (FF)
   Source Clock:      Clk_50MHz rising
   Destination Clock: Clk_50MHz rising
 
-  Data Path: XLXI_9/frequency_0 to XLXI_7/startInternal_0
+  Data Path: XLXI_7/modCount_0 to XLXI_7/startInternal_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.591   0.595  XLXI_9/frequency_0 (XLXI_9/frequency_0)
-     LUT2:I0->O            1   0.704   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_lut<0> (XLXI_7/Mcompar_modCount_cmp_ge0000_lut<0>)
+     FDR:C->Q              2   0.591   0.526  XLXI_7/modCount_0 (XLXI_7/modCount_0)
+     LUT2:I1->O            1   0.704   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_lut<0> (XLXI_7/Mcompar_modCount_cmp_ge0000_lut<0>)
      MUXCY:S->O            1   0.464   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<0> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<0>)
      MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<1> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<1>)
      MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<2> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<2>)
@@ -386,33 +396,34 @@ Delay:               7.104ns (Levels of Logic = 23)
      INV:I->O              1   0.704   0.420  XLXI_7/startInternal_0_not00011_INV_0 (XLXI_7/startInternal_0_not0001)
      FDR:R                     0.911          XLXI_7/startInternal_0
     ----------------------------------------
-    Total                      7.104ns (4.826ns logic, 2.278ns route)
-                                       (67.9% logic, 32.1% route)
+    Total                      7.035ns (4.826ns logic, 2.209ns route)
+                                       (68.6% logic, 31.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 60 / 23
+  Total number of paths / destination ports: 17 / 16
 -------------------------------------------------------------------------
-Offset:              4.076ns (Levels of Logic = 3)
-  Source:            RESET (PAD)
-  Destination:       XLXI_1/Cnt_0 (FF)
+Offset:              4.627ns (Levels of Logic = 4)
+  Source:            RS232_RxD (PAD)
+  Destination:       XLXI_10/iRxBusy (FF)
   Destination Clock: Clk_50MHz rising
 
-  Data Path: RESET to XLXI_1/Cnt_0
+  Data Path: RS232_RxD to XLXI_10/iRxBusy
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.218   0.610  RESET_IBUF (RESET_IBUF)
-     begin scope: 'XLXI_1'
-     LUT2:I1->O            5   0.704   0.633  Cnt_or00001 (Cnt_or0000)
-     FDR:R                     0.911          Cnt_0
+     IBUF:I->O             3   1.218   0.535  RS232_RxD_IBUF (RS232_RxD_IBUF)
+     begin scope: 'XLXI_10'
+     LUT4_L:I3->LO         1   0.704   0.135  iRxBusy_or0000_SW0_SW0 (N8)
+     LUT4:I2->O            1   0.704   0.420  iRxBusy_or0000 (iRxBusy_or0000)
+     FDRE:R                    0.911          iRxBusy
     ----------------------------------------
-    Total                      4.076ns (2.833ns logic, 1.243ns route)
-                                       (69.5% logic, 30.5% route)
+    Total                      4.627ns (3.537ns logic, 1.090ns route)
+                                       (76.4% logic, 23.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
-  Total number of paths / destination ports: 3 / 3
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
 Offset:              5.620ns (Levels of Logic = 3)
   Source:            XLXI_1/iBusy (FF)
@@ -435,7 +446,7 @@ Offset:              5.620ns (Levels of Logic = 3)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Delay:               7.147ns (Levels of Logic = 4)
+Delay:               7.176ns (Levels of Logic = 4)
   Source:            Clk_50MHz (PAD)
   Destination:       SPI_SCK (PAD)
 
@@ -443,26 +454,26 @@ Delay:               7.147ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     BUFGP:I->O          134   1.457   1.294  Clk_50MHz_BUFGP (Clk_50MHz_BUFGP)
+     BUFGP:I->O          225   1.457   1.323  Clk_50MHz_BUFGP (Clk_50MHz_BUFGP)
      begin scope: 'XLXI_1'
      INV:I->O              1   0.704   0.420  SPI_SCK1_INV_0 (SPI_SCK)
      end scope: 'XLXI_1'
      OBUF:I->O                 3.272          SPI_SCK_OBUF (SPI_SCK)
     ----------------------------------------
-    Total                      7.147ns (5.433ns logic, 1.714ns route)
-                                       (76.0% logic, 24.0% route)
+    Total                      7.176ns (5.433ns logic, 1.743ns route)
+                                       (75.7% logic, 24.3% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.94 secs
+Total CPU time to Xst completion: 5.42 secs
  
 --> 
 
-Total memory usage is 4516028 kilobytes
+Total memory usage is 4516008 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    5 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

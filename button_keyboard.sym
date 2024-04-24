@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="button_keyboard">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-4-24T20:16:49</timestamp>
+    <timestamp>2024-4-24T20:15:1</timestamp>
     <pin polarity="Input" x="0" y="32" name="clk" />
     <pin polarity="Input" x="0" y="-224" name="btn0" />
     <pin polarity="Input" x="0" y="-160" name="btn1" />

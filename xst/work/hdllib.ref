@@ -1,6 +1,8 @@
-EN button_keyboard NULL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd sub00/vhpl04 1713990140
-AR button_keyboard behavioral C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd sub00/vhpl05 1713990141
-EN main_schematic NULL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf sub00/vhpl02 1713990142
-EN frequency_generator NULL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.vhd sub00/vhpl00 1713990138
-AR main_schematic behavioral C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf sub00/vhpl03 1713990143
-AR frequency_generator behavioral C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.vhd sub00/vhpl01 1713990139
+AR rs232_keyboard_to_frequency behavioral C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.vhd sub00/vhpl07 1713990885
+EN button_keyboard NULL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd sub00/vhpl04 1713990341
+EN rs232_keyboard_to_frequency NULL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.vhd sub00/vhpl06 1713990884
+AR button_keyboard behavioral C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd sub00/vhpl05 1713990342
+EN main_schematic NULL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf sub00/vhpl02 1713990886
+EN frequency_generator NULL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.vhd sub00/vhpl00 1713990882
+AR main_schematic behavioral C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf sub00/vhpl03 1713990887
+AR frequency_generator behavioral C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.vhd sub00/vhpl01 1713990883

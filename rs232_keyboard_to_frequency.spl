@@ -1,0 +1,6 @@
+[Inputs]
+rxRdy
+=ascii[7:0]=
+[Outputs]
+=frequencyModCount[15:0]=
+[BiDir]

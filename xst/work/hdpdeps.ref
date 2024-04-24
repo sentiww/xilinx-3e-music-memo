@@ -1,24 +1,31 @@
-V3 13
-FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd 2024/04/24.21:19:36 P.20131013
-EN work/button_keyboard 1713990140 \
+V3 18
+FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd 2024/04/24.21:27:37 P.20131013
+EN work/button_keyboard 1713990341 \
       FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/button_keyboard/Behavioral 1713990141 \
+AR work/button_keyboard/Behavioral 1713990342 \
       FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd \
-      EN work/button_keyboard 1713990140
+      EN work/button_keyboard 1713990341
 FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.vhd 2024/04/24.21:21:55 P.20131013
-EN work/frequency_generator 1713990138 \
+EN work/frequency_generator 1713990882 \
       FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/frequency_generator/Behavioral 1713990139 \
+AR work/frequency_generator/Behavioral 1713990883 \
       FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.vhd \
-      EN work/frequency_generator 1713990138
-FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf 2024/04/24.21:17:30 P.20131013
-EN work/main_schematic 1713990142 \
+      EN work/frequency_generator 1713990882
+FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf 2024/04/24.21:34:39 P.20131013
+EN work/main_schematic 1713990886 \
       FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/main_schematic/BEHAVIORAL 1713990143 \
+AR work/main_schematic/BEHAVIORAL 1713990887 \
       FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.vhf \
-      EN work/main_schematic 1713990142 CP DACWrite CP frequency_generator \
-      CP button_keyboard
+      EN work/main_schematic 1713990886 CP DACWrite CP frequency_generator CP RS232 \
+      CP PS2_Rx CP rs232_keyboard_to_frequency
+FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.vhd 2024/04/24.21:33:21 P.20131013
+EN work/rs232_keyboard_to_frequency 1713990884 \
+      FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/rs232_keyboard_to_frequency/Behavioral 1713990885 \
+      FL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.vhd \
+      EN work/rs232_keyboard_to_frequency 1713990884

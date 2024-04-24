@@ -10,6 +10,10 @@ Reading NGO file
 ...
 Loading design module
 "C:\Users\wojci\xilinx-3e-music-memo\xilinx-3e-music-memo/DACWrite.ngc"...
+Loading design module
+"C:\Users\wojci\xilinx-3e-music-memo\xilinx-3e-music-memo/RS232.ngc"...
+Loading design module
+"C:\Users\wojci\xilinx-3e-music-memo\xilinx-3e-music-memo/PS2_Rx.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -36,7 +40,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 4398688 kilobytes
+Total memory usage is 4398732 kilobytes
 
 Writing NGD file "main_schematic.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec
