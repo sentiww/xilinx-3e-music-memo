@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\wojci\xilinx-3e-music-memo\xilinx-3e-music-memo\main_schematic.ncd
+OUTFILE=C:\Users\wojci\xilinx-3e-music-memo\xilinx-3e-music-memo\main_schematic.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\wojci\xilinx-3e-music-memo\xilinx-3e-music-memo
+LICENSE=WebPack
+USER_INFO=213026322_0_0_010

@@ -1,0 +1,105 @@
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -uc ADC_DAC.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc GenIO.ucf -uc ADC_DAC.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf GenIO.ucf -ucf ADC_DAC.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 
+xst -intstyle ise -ifn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.xst" -ofn "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/main_schematic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ADC_DAC.ucf -uc GenIO.ucf -p xc3s500e-fg320-4 main_schematic.ngc main_schematic.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o main_schematic_map.ncd main_schematic.ngd main_schematic.pcf 
+par -w -intstyle ise -ol high -t 1 main_schematic_map.ncd main_schematic.ncd main_schematic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml main_schematic.twx main_schematic.ncd -o main_schematic.twr main_schematic.pcf -ucf ADC_DAC.ucf -ucf GenIO.ucf 
+bitgen -intstyle ise -f main_schematic.ut main_schematic.ncd 

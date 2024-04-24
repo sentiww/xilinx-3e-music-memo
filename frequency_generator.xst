@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/xst"
+elaborate
+-ifn frequency_generator.prj
+-ifmt mixed

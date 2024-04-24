@@ -1,0 +1,11 @@
+vhdtdtfi -lib work frequency_generator.vhd -prj xilinx-3e-music-memo -o frequency_generator.spl -module frequency_generator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+vhdtdtfi -lib work frequency_generator.vhd -prj xilinx-3e-music-memo -o frequency_generator.spl -module frequency_generator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e frequency_generator.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.sym 
+vhdtdtfi -lib work frequency_generator.vhd -prj xilinx-3e-music-memo -o frequency_generator.spl -module frequency_generator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e frequency_generator.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.sym 
+vhdtdtfi -lib work frequency_generator.vhd -prj xilinx-3e-music-memo -o frequency_generator.spl -module frequency_generator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e frequency_generator.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.sym 
+vhdtdtfi -lib work frequency_generator.vhd -prj xilinx-3e-music-memo -o frequency_generator.spl -module frequency_generator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e frequency_generator.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.sym 
+vhdtdtfi -lib work frequency_generator.vhd -prj xilinx-3e-music-memo -o frequency_generator.spl -module frequency_generator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e frequency_generator.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/frequency_generator.sym 
