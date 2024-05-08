@@ -1,0 +1,9 @@
+[Inputs]
+clk
+btn0
+btn1
+btn2
+btn3
+[Outputs]
+=frequency[15:0]=
+[BiDir]

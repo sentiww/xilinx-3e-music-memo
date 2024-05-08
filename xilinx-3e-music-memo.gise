@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="xilinx-3e-music-memo.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="PS2_Rx.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="RS232.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="button_keyboard.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="button_keyboard.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="frequency_generator.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="frequency_generator.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="frequency_generator.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="frequency_generator.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="frequency_generator.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="main_schematic.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="main_schematic.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="main_schematic.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="main_schematic.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="main_schematic.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="main_schematic.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="main_schematic.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="main_schematic.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="main_schematic.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="main_schematic.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="main_schematic.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="main_schematic.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="main_schematic.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="main_schematic.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="main_schematic.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="main_schematic.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="main_schematic.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="main_schematic.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="main_schematic.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="main_schematic.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="main_schematic.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="main_schematic.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="main_schematic.vhf"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="main_schematic.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="main_schematic.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="main_schematic_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="main_schematic_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="main_schematic_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="main_schematic_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="main_schematic_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="main_schematic_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="main_schematic_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="main_schematic_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="main_schematic_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="main_schematic_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="main_schematic_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="main_schematic_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="main_schematic_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="main_schematic_usage.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="main_schematic_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="main_schematic_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="rs232_keyboard_to_frequency.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="rs232_keyboard_to_frequency.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1713990336" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1713990335">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1714027126" xil_pn:in_ck="4627469385476024097" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1602138058807330332" xil_pn:start_ts="1714027124">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="main_schematic.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1713990337" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="345312277632697482" xil_pn:start_ts="1713990337">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1713990337" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1713990337">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1713990337" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-2560313030025539102" xil_pn:start_ts="1713990337">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1713990337" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1713990337">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1713990337" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-5598349270893773484" xil_pn:start_ts="1713990337">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1714027284" xil_pn:in_ck="-6215160026970562694" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="3930889414320929767" xil_pn:start_ts="1714027277">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name=".lso"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="main_schematic.jhd"/>
+      <outfile xil_pn:name="main_schematic.lso"/>
+      <outfile xil_pn:name="main_schematic.ngc"/>
+      <outfile xil_pn:name="main_schematic.ngr"/>
+      <outfile xil_pn:name="main_schematic.prj"/>
+      <outfile xil_pn:name="main_schematic.stx"/>
+      <outfile xil_pn:name="main_schematic.syr"/>
+      <outfile xil_pn:name="main_schematic.xst"/>
+      <outfile xil_pn:name="main_schematic_vhdl.prj"/>
+      <outfile xil_pn:name="main_schematic_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1714026635" xil_pn:in_ck="1791089808375077529" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="6150702331433715671" xil_pn:start_ts="1714026635">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1714027288" xil_pn:in_ck="8277704498263118874" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-4984506148297223977" xil_pn:start_ts="1714027284">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="main_schematic.bld"/>
+      <outfile xil_pn:name="main_schematic.ngd"/>
+      <outfile xil_pn:name="main_schematic_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1714027292" xil_pn:in_ck="-8906177299076249291" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1714027288">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="main_schematic.pcf"/>
+      <outfile xil_pn:name="main_schematic_map.map"/>
+      <outfile xil_pn:name="main_schematic_map.mrp"/>
+      <outfile xil_pn:name="main_schematic_map.ncd"/>
+      <outfile xil_pn:name="main_schematic_map.ngm"/>
+      <outfile xil_pn:name="main_schematic_map.xrpt"/>
+      <outfile xil_pn:name="main_schematic_summary.xml"/>
+      <outfile xil_pn:name="main_schematic_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1714027302" xil_pn:in_ck="-7327899987292329266" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1714027292">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="main_schematic.ncd"/>
+      <outfile xil_pn:name="main_schematic.pad"/>
+      <outfile xil_pn:name="main_schematic.par"/>
+      <outfile xil_pn:name="main_schematic.ptwx"/>
+      <outfile xil_pn:name="main_schematic.unroutes"/>
+      <outfile xil_pn:name="main_schematic.xpi"/>
+      <outfile xil_pn:name="main_schematic_pad.csv"/>
+      <outfile xil_pn:name="main_schematic_pad.txt"/>
+      <outfile xil_pn:name="main_schematic_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1714027305" xil_pn:in_ck="4627469385476018648" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="-7817169320884990698" xil_pn:start_ts="1714027302">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="main_schematic.bgn"/>
+      <outfile xil_pn:name="main_schematic.bit"/>
+      <outfile xil_pn:name="main_schematic.drc"/>
+      <outfile xil_pn:name="main_schematic.ut"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1714027306" xil_pn:in_ck="4627469385476005794" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1714027305">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1714027302" xil_pn:in_ck="-8906177299076249423" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1714027299">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="main_schematic.twr"/>
+      <outfile xil_pn:name="main_schematic.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>

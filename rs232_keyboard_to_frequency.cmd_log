@@ -1,0 +1,14 @@
+vhdtdtfi -lib work rs232_keyboard_to_frequency.vhd -prj xilinx-3e-music-memo -o rs232_keyboard_to_frequency.spl -module rs232_keyboard_to_frequency -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e rs232_keyboard_to_frequency.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.sym 
+vhdtdtfi -lib work rs232_keyboard_to_frequency.vhd -prj xilinx-3e-music-memo -o rs232_keyboard_to_frequency.spl -module rs232_keyboard_to_frequency -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e rs232_keyboard_to_frequency.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/rs232_keyboard_to_frequency.sym 
+vhdtdtfi -lib work rs232_keyboard_to_frequency.vhd -prj xilinx-3e-music-memo -o rs232_keyboard_to_frequency.spl -module rs232_keyboard_to_frequency -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e rs232_keyboard_to_frequency.spl C:/Users/lab/Desktop/xilinx-3e-music-memo-rs232/rs232_keyboard_to_frequency.sym 
+vhdtdtfi -lib work rs232_keyboard_to_frequency.vhd -prj xilinx-3e-music-memo -o rs232_keyboard_to_frequency.spl -module rs232_keyboard_to_frequency -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e rs232_keyboard_to_frequency.spl C:/Users/lab/Desktop/xilinx-3e-music-memo-rs232/rs232_keyboard_to_frequency.sym 
+vhdtdtfi -lib work rs232_keyboard_to_frequency.vhd -prj xilinx-3e-music-memo -o rs232_keyboard_to_frequency.spl -module rs232_keyboard_to_frequency -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e rs232_keyboard_to_frequency.spl C:/Users/lab/Desktop/xilinx-3e-music-memo-rs232/rs232_keyboard_to_frequency.sym 
+vhdtdtfi -lib work rs232_keyboard_to_frequency.vhd -prj xilinx-3e-music-memo -o rs232_keyboard_to_frequency.spl -module rs232_keyboard_to_frequency -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e rs232_keyboard_to_frequency.spl C:/Users/lab/Desktop/xilinx-3e-music-memo-rs232/rs232_keyboard_to_frequency.sym 
+vhdtdtfi -lib work rs232_keyboard_to_frequency.vhd -prj xilinx-3e-music-memo -o rs232_keyboard_to_frequency.spl -module rs232_keyboard_to_frequency -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e rs232_keyboard_to_frequency.spl C:/Users/lab/Desktop/xilinx-3e-music-memo-rs232/rs232_keyboard_to_frequency.sym 
