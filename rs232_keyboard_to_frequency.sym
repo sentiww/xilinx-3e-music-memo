@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="rs232_keyboard_to_frequency">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-4-25T6:41:16</timestamp>
+    <timestamp>2024-5-8T20:1:35</timestamp>
     <pin polarity="Input" x="0" y="-96" name="rxRdy" />
     <pin polarity="Input" x="0" y="32" name="f0" />
     <pin polarity="Input" x="0" y="224" name="clk" />

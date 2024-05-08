@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : main_schematic.vhf
--- /___/   /\     Timestamp : 04/25/2024 08:38:45
+-- /___/   /\     Timestamp : 05/08/2024 21:02:19
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/xilinx-3e-music-memo-rs232/main_schematic.vhf -w C:/Users/lab/Desktop/xilinx-3e-music-memo-rs232/main_schematic.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/main_schematic.vhf -w C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/main_schematic.sch
 --Design Name: main_schematic
 --Device: spartan3e
 --Purpose:
@@ -95,9 +95,9 @@ architecture BEHAVIORAL of main_schematic is
    component rs232_keyboard_to_frequency
       port ( rxRdy             : in    std_logic; 
              f0                : in    std_logic; 
+             clk               : in    std_logic; 
              scan              : in    std_logic_vector (7 downto 0); 
-             frequencyModCount : out   std_logic_vector (15 downto 0); 
-             clk               : in    std_logic);
+             frequencyModCount : out   std_logic_vector (15 downto 0));
    end component;
    
 begin

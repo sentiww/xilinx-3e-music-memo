@@ -9,34 +9,36 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Apr 25 08:41:29 2024
+Mapped Date    : Wed May 08 21:02:36 2024
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:           158 out of   9,312    1%
-  Number of 4 input LUTs:               138 out of   9,312    1%
+  Total Number Slice Registers:         195 out of   9,312    2%
+    Number used as Flip Flops:          163
+    Number used as Latches:              32
+  Number of 4 input LUTs:               183 out of   9,312    1%
 Logic Distribution:
-  Number of occupied Slices:            135 out of   4,656    2%
-    Number of Slices containing only related logic:     135 out of     135 100%
-    Number of Slices containing unrelated logic:          0 out of     135   0%
+  Number of occupied Slices:            177 out of   4,656    3%
+    Number of Slices containing only related logic:     177 out of     177 100%
+    Number of Slices containing unrelated logic:          0 out of     177   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:         207 out of   9,312    2%
-    Number used as logic:               138
-    Number used as a route-thru:         69
+  Total Number of 4 input LUTs:         283 out of   9,312    3%
+    Number used as logic:               183
+    Number used as a route-thru:        100
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
   Number of bonded IOBs:                 15 out of     232    6%
-  Number of BUFGMUXs:                     1 out of      24    4%
+  Number of BUFGMUXs:                     2 out of      24    8%
 
-Average Fanout of Non-Clock Nets:                2.87
+Average Fanout of Non-Clock Nets:                2.91
 
 Peak Memory Usage:  4405 MB
-Total REAL time to MAP completion:  1 secs 
+Total REAL time to MAP completion:  3 secs 
 Total CPU time to MAP completion:   1 secs 
 
 NOTES:

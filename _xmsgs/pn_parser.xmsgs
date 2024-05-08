@@ -8,14 +8,5 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/button_keyboard.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/frequency_generator.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/rs232_keyboard_to_frequency.vhd&quot; into library work</arg>
-</msg>
-
 </messages>
 
