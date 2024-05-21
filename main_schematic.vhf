@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : main_schematic.vhf
--- /___/   /\     Timestamp : 05/09/2024 09:27:37
+-- /___/   /\     Timestamp : 05/21/2024 18:42:51
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/main_schematic.vhf -w C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/main_schematic.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/main_schematic.vhf -w C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/main_schematic.sch
 --Design Name: main_schematic
 --Device: spartan3e
 --Purpose:

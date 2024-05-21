@@ -1,8 +1,8 @@
-AR rs232_keyboard_to_frequency behavioral C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/rs232_keyboard_to_frequency.vhd sub00/vhpl07 1715244378
+AR rs232_keyboard_to_frequency behavioral C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/rs232_keyboard_to_frequency.vhd sub00/vhpl07 1716323662
 EN button_keyboard NULL C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd sub00/vhpl04 1713990341
-EN rs232_keyboard_to_frequency NULL C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/rs232_keyboard_to_frequency.vhd sub00/vhpl06 1715244377
+EN rs232_keyboard_to_frequency NULL C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/rs232_keyboard_to_frequency.vhd sub00/vhpl06 1716323661
 AR button_keyboard behavioral C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.vhd sub00/vhpl05 1713990342
-EN main_schematic NULL C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/main_schematic.vhf sub00/vhpl02 1715244379
-EN frequency_generator NULL C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/frequency_generator.vhd sub00/vhpl00 1715244375
-AR main_schematic behavioral C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/main_schematic.vhf sub00/vhpl03 1715244380
-AR frequency_generator behavioral C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/frequency_generator.vhd sub00/vhpl01 1715244376
+EN main_schematic NULL C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/main_schematic.vhf sub00/vhpl02 1716323663
+EN frequency_generator NULL C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/frequency_generator.vhd sub00/vhpl00 1716323659
+AR main_schematic behavioral C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/main_schematic.vhf sub00/vhpl03 1716323664
+AR frequency_generator behavioral C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/frequency_generator.vhd sub00/vhpl01 1716323660

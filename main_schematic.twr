@@ -37,628 +37,680 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 15503 paths analyzed, 1255 endpoints analyzed, 0 failing endpoints
+ 11511 paths analyzed, 1122 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  10.276ns.
+ Minimum period is   9.264ns.
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_21/state_FSM_FFd1_2 (SLICE_X39Y50.BY), 189 paths
+Paths for end point XLXI_7/startInternal_0 (SLICE_X41Y51.SR), 124 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     9.724ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_21/inputNoteIndex_2 (FF)
-  Destination:          XLXI_21/state_FSM_FFd1_2 (FF)
+Slack (setup path):     10.736ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_21/noteIndex_0 (FF)
+  Destination:          XLXI_7/startInternal_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      10.275ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.001ns (0.118 - 0.119)
+  Data Path Delay:      9.261ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.003ns (0.113 - 0.116)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_21/inputNoteIndex_2 to XLXI_21/state_FSM_FFd1_2
+  Maximum Data Path: XLXI_21/noteIndex_0 to XLXI_7/startInternal_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y52.XQ      Tcko                  0.591   XLXI_21/inputNoteIndex<2>
-                                                       XLXI_21/inputNoteIndex_2
-    SLICE_X30Y56.F2      net (fanout=10)       1.052   XLXI_21/inputNoteIndex<2>
-    SLICE_X30Y56.X       Tilo                  0.759   XLXI_21/Mrom__varindex000111
-                                                       XLXI_21/Mrom__varindex0001112
-    SLICE_X45Y52.F1      net (fanout=2)        1.686   XLXI_21/Mrom__varindex000111
-    SLICE_X45Y52.XB      Topxb                 1.176   XLXI_21/Mrom__varindex000112
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_lut<6>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.BX      net (fanout=2)        1.849   XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.X       Tbxx                  0.739   N63
-                                                       XLXI_21/state_FSM_FFd1-In239_SW0
-    SLICE_X33Y57.F2      net (fanout=1)        0.101   N63
-    SLICE_X33Y57.X       Tilo                  0.704   XLXI_21/state_FSM_FFd1
-                                                       XLXI_21/state_FSM_FFd1-In2641
-    SLICE_X39Y50.BY      net (fanout=2)        1.257   XLXI_21/state_FSM_FFd1-In264
-    SLICE_X39Y50.CLK     Tdick                 0.361   XLXI_21/state_FSM_FFd1_2
-                                                       XLXI_21/state_FSM_FFd1_2
+    SLICE_X29Y53.XQ      Tcko                  0.591   XLXI_21/noteIndex<0>
+                                                       XLXI_21/noteIndex_0
+    SLICE_X41Y52.F4      net (fanout=6)        1.716   XLXI_21/noteIndex<0>
+    SLICE_X41Y52.X       Tilo                  0.704   XLXI_21/N51
+                                                       XLXI_21/frequencyModCount<2>11
+    SLICE_X44Y51.F3      net (fanout=5)        1.409   XLXI_21/N51
+    SLICE_X44Y51.COUT    Topcyf                1.162   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_lut<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.XB      Tcinxb                0.495   XLXI_7/modCount_cmp_ge0000
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20>
+    SLICE_X41Y51.SR      net (fanout=17)       1.364   XLXI_7/modCount_cmp_ge0000
+    SLICE_X41Y51.CLK     Tsrck                 0.910   XLXI_7/startInternal<0>
+                                                       XLXI_7/startInternal_0
     -------------------------------------------------  ---------------------------
-    Total                                     10.275ns (4.330ns logic, 5.945ns route)
-                                                       (42.1% logic, 57.9% route)
+    Total                                      9.261ns (4.772ns logic, 4.489ns route)
+                                                       (51.5% logic, 48.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     9.774ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_21/inputNoteIndex_2 (FF)
-  Destination:          XLXI_21/state_FSM_FFd1_2 (FF)
+Slack (setup path):     10.896ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_21/noteIndex_2 (FF)
+  Destination:          XLXI_7/startInternal_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      10.225ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.001ns (0.118 - 0.119)
+  Data Path Delay:      9.103ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.001ns (0.113 - 0.114)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_21/inputNoteIndex_2 to XLXI_21/state_FSM_FFd1_2
+  Maximum Data Path: XLXI_21/noteIndex_2 to XLXI_7/startInternal_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y52.XQ      Tcko                  0.591   XLXI_21/inputNoteIndex<2>
-                                                       XLXI_21/inputNoteIndex_2
-    SLICE_X30Y56.F2      net (fanout=10)       1.052   XLXI_21/inputNoteIndex<2>
-    SLICE_X30Y56.X       Tilo                  0.759   XLXI_21/Mrom__varindex000111
-                                                       XLXI_21/Mrom__varindex0001112
-    SLICE_X45Y50.G4      net (fanout=2)        1.289   XLXI_21/Mrom__varindex000111
-    SLICE_X45Y50.COUT    Topcyg                1.001   XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_lut<3>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-    SLICE_X45Y51.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-    SLICE_X45Y51.COUT    Tbyp                  0.118   XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<4>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-    SLICE_X45Y52.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-    SLICE_X45Y52.XB      Tcinxb                0.404   XLXI_21/Mrom__varindex000112
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.BX      net (fanout=2)        1.849   XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.X       Tbxx                  0.739   N63
-                                                       XLXI_21/state_FSM_FFd1-In239_SW0
-    SLICE_X33Y57.F2      net (fanout=1)        0.101   N63
-    SLICE_X33Y57.X       Tilo                  0.704   XLXI_21/state_FSM_FFd1
-                                                       XLXI_21/state_FSM_FFd1-In2641
-    SLICE_X39Y50.BY      net (fanout=2)        1.257   XLXI_21/state_FSM_FFd1-In264
-    SLICE_X39Y50.CLK     Tdick                 0.361   XLXI_21/state_FSM_FFd1_2
-                                                       XLXI_21/state_FSM_FFd1_2
+    SLICE_X29Y54.XQ      Tcko                  0.591   XLXI_21/noteIndex<2>
+                                                       XLXI_21/noteIndex_2
+    SLICE_X41Y52.F1      net (fanout=6)        1.558   XLXI_21/noteIndex<2>
+    SLICE_X41Y52.X       Tilo                  0.704   XLXI_21/N51
+                                                       XLXI_21/frequencyModCount<2>11
+    SLICE_X44Y51.F3      net (fanout=5)        1.409   XLXI_21/N51
+    SLICE_X44Y51.COUT    Topcyf                1.162   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_lut<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.XB      Tcinxb                0.495   XLXI_7/modCount_cmp_ge0000
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20>
+    SLICE_X41Y51.SR      net (fanout=17)       1.364   XLXI_7/modCount_cmp_ge0000
+    SLICE_X41Y51.CLK     Tsrck                 0.910   XLXI_7/startInternal<0>
+                                                       XLXI_7/startInternal_0
     -------------------------------------------------  ---------------------------
-    Total                                     10.225ns (4.677ns logic, 5.548ns route)
-                                                       (45.7% logic, 54.3% route)
+    Total                                      9.103ns (4.772ns logic, 4.331ns route)
+                                                       (52.4% logic, 47.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     9.924ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_21/inputNoteIndex_0 (FF)
-  Destination:          XLXI_21/state_FSM_FFd1_2 (FF)
+Slack (setup path):     10.900ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_21/noteIndex_0 (FF)
+  Destination:          XLXI_7/startInternal_0 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      10.073ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.003ns (0.118 - 0.121)
+  Data Path Delay:      9.097ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.003ns (0.113 - 0.116)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_21/inputNoteIndex_0 to XLXI_21/state_FSM_FFd1_2
+  Maximum Data Path: XLXI_21/noteIndex_0 to XLXI_7/startInternal_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y51.XQ      Tcko                  0.591   XLXI_21/inputNoteIndex<0>
-                                                       XLXI_21/inputNoteIndex_0
-    SLICE_X45Y52.G1      net (fanout=10)       1.373   XLXI_21/inputNoteIndex<0>
-    SLICE_X45Y52.Y       Tilo                  0.704   XLXI_21/Mrom__varindex000112
-                                                       XLXI_21/Mrom__varindex0001121
-    SLICE_X45Y49.G1      net (fanout=3)        0.753   XLXI_21/Mrom__varindex000112
-    SLICE_X45Y49.COUT    Topcyg                1.001   XLXI_21/Mcompar_state_cmp_eq0001_cy<1>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_lut<1>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<1>
-    SLICE_X45Y50.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<1>
-    SLICE_X45Y50.COUT    Tbyp                  0.118   XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<2>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-    SLICE_X45Y51.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-    SLICE_X45Y51.COUT    Tbyp                  0.118   XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<4>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-    SLICE_X45Y52.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-    SLICE_X45Y52.XB      Tcinxb                0.404   XLXI_21/Mrom__varindex000112
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.BX      net (fanout=2)        1.849   XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.X       Tbxx                  0.739   N63
-                                                       XLXI_21/state_FSM_FFd1-In239_SW0
-    SLICE_X33Y57.F2      net (fanout=1)        0.101   N63
-    SLICE_X33Y57.X       Tilo                  0.704   XLXI_21/state_FSM_FFd1
-                                                       XLXI_21/state_FSM_FFd1-In2641
-    SLICE_X39Y50.BY      net (fanout=2)        1.257   XLXI_21/state_FSM_FFd1-In264
-    SLICE_X39Y50.CLK     Tdick                 0.361   XLXI_21/state_FSM_FFd1_2
-                                                       XLXI_21/state_FSM_FFd1_2
+    SLICE_X29Y53.XQ      Tcko                  0.591   XLXI_21/noteIndex<0>
+                                                       XLXI_21/noteIndex_0
+    SLICE_X41Y52.F4      net (fanout=6)        1.716   XLXI_21/noteIndex<0>
+    SLICE_X41Y52.X       Tilo                  0.704   XLXI_21/N51
+                                                       XLXI_21/frequencyModCount<2>11
+    SLICE_X44Y50.F4      net (fanout=5)        1.115   XLXI_21/N51
+    SLICE_X44Y50.COUT    Topcyf                1.162   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_lut<2>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<2>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>
+    SLICE_X44Y51.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>
+    SLICE_X44Y51.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.XB      Tcinxb                0.495   XLXI_7/modCount_cmp_ge0000
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20>
+    SLICE_X41Y51.SR      net (fanout=17)       1.364   XLXI_7/modCount_cmp_ge0000
+    SLICE_X41Y51.CLK     Tsrck                 0.910   XLXI_7/startInternal<0>
+                                                       XLXI_7/startInternal_0
     -------------------------------------------------  ---------------------------
-    Total                                     10.073ns (4.740ns logic, 5.333ns route)
-                                                       (47.1% logic, 52.9% route)
+    Total                                      9.097ns (4.902ns logic, 4.195ns route)
+                                                       (53.9% logic, 46.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_21/state_FSM_FFd1_1 (SLICE_X38Y52.BY), 189 paths
+Paths for end point XLXI_7/modCount_20 (SLICE_X45Y58.SR), 124 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     9.954ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_21/inputNoteIndex_2 (FF)
-  Destination:          XLXI_21/state_FSM_FFd1_1 (FF)
+Slack (setup path):     10.809ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_21/noteIndex_0 (FF)
+  Destination:          XLXI_7/modCount_20 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      10.043ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.003ns (0.116 - 0.119)
+  Data Path Delay:      9.166ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.025ns (0.091 - 0.116)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_21/inputNoteIndex_2 to XLXI_21/state_FSM_FFd1_1
+  Maximum Data Path: XLXI_21/noteIndex_0 to XLXI_7/modCount_20
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y52.XQ      Tcko                  0.591   XLXI_21/inputNoteIndex<2>
-                                                       XLXI_21/inputNoteIndex_2
-    SLICE_X30Y56.F2      net (fanout=10)       1.052   XLXI_21/inputNoteIndex<2>
-    SLICE_X30Y56.X       Tilo                  0.759   XLXI_21/Mrom__varindex000111
-                                                       XLXI_21/Mrom__varindex0001112
-    SLICE_X45Y52.F1      net (fanout=2)        1.686   XLXI_21/Mrom__varindex000111
-    SLICE_X45Y52.XB      Topxb                 1.176   XLXI_21/Mrom__varindex000112
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_lut<6>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.BX      net (fanout=2)        1.849   XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.X       Tbxx                  0.739   N63
-                                                       XLXI_21/state_FSM_FFd1-In239_SW0
-    SLICE_X33Y57.F2      net (fanout=1)        0.101   N63
-    SLICE_X33Y57.X       Tilo                  0.704   XLXI_21/state_FSM_FFd1
-                                                       XLXI_21/state_FSM_FFd1-In2641
-    SLICE_X38Y52.BY      net (fanout=2)        1.004   XLXI_21/state_FSM_FFd1-In264
-    SLICE_X38Y52.CLK     Tdick                 0.382   XLXI_21/state_FSM_FFd1_1
-                                                       XLXI_21/state_FSM_FFd1_1
+    SLICE_X29Y53.XQ      Tcko                  0.591   XLXI_21/noteIndex<0>
+                                                       XLXI_21/noteIndex_0
+    SLICE_X41Y52.F4      net (fanout=6)        1.716   XLXI_21/noteIndex<0>
+    SLICE_X41Y52.X       Tilo                  0.704   XLXI_21/N51
+                                                       XLXI_21/frequencyModCount<2>11
+    SLICE_X44Y51.F3      net (fanout=5)        1.409   XLXI_21/N51
+    SLICE_X44Y51.COUT    Topcyf                1.162   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_lut<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.XB      Tcinxb                0.495   XLXI_7/modCount_cmp_ge0000
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20>
+    SLICE_X45Y58.SR      net (fanout=17)       1.269   XLXI_7/modCount_cmp_ge0000
+    SLICE_X45Y58.CLK     Tsrck                 0.910   XLXI_7/modCount<20>
+                                                       XLXI_7/modCount_20
     -------------------------------------------------  ---------------------------
-    Total                                     10.043ns (4.351ns logic, 5.692ns route)
-                                                       (43.3% logic, 56.7% route)
+    Total                                      9.166ns (4.772ns logic, 4.394ns route)
+                                                       (52.1% logic, 47.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     10.004ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_21/inputNoteIndex_2 (FF)
-  Destination:          XLXI_21/state_FSM_FFd1_1 (FF)
+Slack (setup path):     10.969ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_21/noteIndex_2 (FF)
+  Destination:          XLXI_7/modCount_20 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      9.993ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.003ns (0.116 - 0.119)
+  Data Path Delay:      9.008ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.023ns (0.091 - 0.114)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_21/inputNoteIndex_2 to XLXI_21/state_FSM_FFd1_1
+  Maximum Data Path: XLXI_21/noteIndex_2 to XLXI_7/modCount_20
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y52.XQ      Tcko                  0.591   XLXI_21/inputNoteIndex<2>
-                                                       XLXI_21/inputNoteIndex_2
-    SLICE_X30Y56.F2      net (fanout=10)       1.052   XLXI_21/inputNoteIndex<2>
-    SLICE_X30Y56.X       Tilo                  0.759   XLXI_21/Mrom__varindex000111
-                                                       XLXI_21/Mrom__varindex0001112
-    SLICE_X45Y50.G4      net (fanout=2)        1.289   XLXI_21/Mrom__varindex000111
-    SLICE_X45Y50.COUT    Topcyg                1.001   XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_lut<3>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-    SLICE_X45Y51.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-    SLICE_X45Y51.COUT    Tbyp                  0.118   XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<4>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-    SLICE_X45Y52.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-    SLICE_X45Y52.XB      Tcinxb                0.404   XLXI_21/Mrom__varindex000112
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.BX      net (fanout=2)        1.849   XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.X       Tbxx                  0.739   N63
-                                                       XLXI_21/state_FSM_FFd1-In239_SW0
-    SLICE_X33Y57.F2      net (fanout=1)        0.101   N63
-    SLICE_X33Y57.X       Tilo                  0.704   XLXI_21/state_FSM_FFd1
-                                                       XLXI_21/state_FSM_FFd1-In2641
-    SLICE_X38Y52.BY      net (fanout=2)        1.004   XLXI_21/state_FSM_FFd1-In264
-    SLICE_X38Y52.CLK     Tdick                 0.382   XLXI_21/state_FSM_FFd1_1
-                                                       XLXI_21/state_FSM_FFd1_1
+    SLICE_X29Y54.XQ      Tcko                  0.591   XLXI_21/noteIndex<2>
+                                                       XLXI_21/noteIndex_2
+    SLICE_X41Y52.F1      net (fanout=6)        1.558   XLXI_21/noteIndex<2>
+    SLICE_X41Y52.X       Tilo                  0.704   XLXI_21/N51
+                                                       XLXI_21/frequencyModCount<2>11
+    SLICE_X44Y51.F3      net (fanout=5)        1.409   XLXI_21/N51
+    SLICE_X44Y51.COUT    Topcyf                1.162   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_lut<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.XB      Tcinxb                0.495   XLXI_7/modCount_cmp_ge0000
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20>
+    SLICE_X45Y58.SR      net (fanout=17)       1.269   XLXI_7/modCount_cmp_ge0000
+    SLICE_X45Y58.CLK     Tsrck                 0.910   XLXI_7/modCount<20>
+                                                       XLXI_7/modCount_20
     -------------------------------------------------  ---------------------------
-    Total                                      9.993ns (4.698ns logic, 5.295ns route)
-                                                       (47.0% logic, 53.0% route)
+    Total                                      9.008ns (4.772ns logic, 4.236ns route)
+                                                       (53.0% logic, 47.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     10.154ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_21/inputNoteIndex_0 (FF)
-  Destination:          XLXI_21/state_FSM_FFd1_1 (FF)
+Slack (setup path):     10.973ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_21/noteIndex_0 (FF)
+  Destination:          XLXI_7/modCount_20 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      9.841ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.005ns (0.116 - 0.121)
+  Data Path Delay:      9.002ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.025ns (0.091 - 0.116)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_21/inputNoteIndex_0 to XLXI_21/state_FSM_FFd1_1
+  Maximum Data Path: XLXI_21/noteIndex_0 to XLXI_7/modCount_20
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X31Y51.XQ      Tcko                  0.591   XLXI_21/inputNoteIndex<0>
-                                                       XLXI_21/inputNoteIndex_0
-    SLICE_X45Y52.G1      net (fanout=10)       1.373   XLXI_21/inputNoteIndex<0>
-    SLICE_X45Y52.Y       Tilo                  0.704   XLXI_21/Mrom__varindex000112
-                                                       XLXI_21/Mrom__varindex0001121
-    SLICE_X45Y49.G1      net (fanout=3)        0.753   XLXI_21/Mrom__varindex000112
-    SLICE_X45Y49.COUT    Topcyg                1.001   XLXI_21/Mcompar_state_cmp_eq0001_cy<1>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_lut<1>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<1>
-    SLICE_X45Y50.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<1>
-    SLICE_X45Y50.COUT    Tbyp                  0.118   XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<2>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-    SLICE_X45Y51.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<3>
-    SLICE_X45Y51.COUT    Tbyp                  0.118   XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<4>
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-    SLICE_X45Y52.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_eq0001_cy<5>
-    SLICE_X45Y52.XB      Tcinxb                0.404   XLXI_21/Mrom__varindex000112
-                                                       XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.BX      net (fanout=2)        1.849   XLXI_21/Mcompar_state_cmp_eq0001_cy<6>
-    SLICE_X33Y56.X       Tbxx                  0.739   N63
-                                                       XLXI_21/state_FSM_FFd1-In239_SW0
-    SLICE_X33Y57.F2      net (fanout=1)        0.101   N63
-    SLICE_X33Y57.X       Tilo                  0.704   XLXI_21/state_FSM_FFd1
-                                                       XLXI_21/state_FSM_FFd1-In2641
-    SLICE_X38Y52.BY      net (fanout=2)        1.004   XLXI_21/state_FSM_FFd1-In264
-    SLICE_X38Y52.CLK     Tdick                 0.382   XLXI_21/state_FSM_FFd1_1
-                                                       XLXI_21/state_FSM_FFd1_1
+    SLICE_X29Y53.XQ      Tcko                  0.591   XLXI_21/noteIndex<0>
+                                                       XLXI_21/noteIndex_0
+    SLICE_X41Y52.F4      net (fanout=6)        1.716   XLXI_21/noteIndex<0>
+    SLICE_X41Y52.X       Tilo                  0.704   XLXI_21/N51
+                                                       XLXI_21/frequencyModCount<2>11
+    SLICE_X44Y50.F4      net (fanout=5)        1.115   XLXI_21/N51
+    SLICE_X44Y50.COUT    Topcyf                1.162   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_lut<2>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<2>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>
+    SLICE_X44Y51.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>
+    SLICE_X44Y51.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.XB      Tcinxb                0.495   XLXI_7/modCount_cmp_ge0000
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20>
+    SLICE_X45Y58.SR      net (fanout=17)       1.269   XLXI_7/modCount_cmp_ge0000
+    SLICE_X45Y58.CLK     Tsrck                 0.910   XLXI_7/modCount<20>
+                                                       XLXI_7/modCount_20
     -------------------------------------------------  ---------------------------
-    Total                                      9.841ns (4.761ns logic, 5.080ns route)
-                                                       (48.4% logic, 51.6% route)
+    Total                                      9.002ns (4.902ns logic, 4.100ns route)
+                                                       (54.5% logic, 45.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_21/state_FSM_FFd2_1 (SLICE_X38Y54.SR), 100 paths
+Paths for end point XLXI_7/modCount_21 (SLICE_X45Y58.SR), 124 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     10.747ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_21/playedNoteIndex_1 (FF)
-  Destination:          XLXI_21/state_FSM_FFd2_1 (FF)
+Slack (setup path):     10.809ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_21/noteIndex_0 (FF)
+  Destination:          XLXI_7/modCount_21 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      9.251ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.002ns (0.114 - 0.116)
+  Data Path Delay:      9.166ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.025ns (0.091 - 0.116)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_21/playedNoteIndex_1 to XLXI_21/state_FSM_FFd2_1
+  Maximum Data Path: XLXI_21/noteIndex_0 to XLXI_7/modCount_21
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X28Y52.YQ      Tcko                  0.652   XLXI_21/playedNoteIndex<0>
-                                                       XLXI_21/playedNoteIndex_1
-    SLICE_X26Y52.G2      net (fanout=3)        0.779   XLXI_21/playedNoteIndex<1>
-    SLICE_X26Y52.COUT    Topcyg                1.131   XLXI_21/Mcompar_state_cmp_le0000_cy<1>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_lut<1>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<1>
-    SLICE_X26Y53.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<1>
-    SLICE_X26Y53.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<3>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<2>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<3>
-    SLICE_X26Y54.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<3>
-    SLICE_X26Y54.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<5>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<4>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<5>
-    SLICE_X26Y55.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<5>
-    SLICE_X26Y55.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<7>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<6>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<7>
-    SLICE_X26Y56.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<7>
-    SLICE_X26Y56.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<9>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<8>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<9>
-    SLICE_X26Y57.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<9>
-    SLICE_X26Y57.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<11>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<10>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<11>
-    SLICE_X26Y58.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<11>
-    SLICE_X26Y58.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<13>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<12>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<13>
-    SLICE_X26Y59.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<13>
-    SLICE_X26Y59.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<15>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<14>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<15>
-    SLICE_X26Y60.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<15>
-    SLICE_X26Y60.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<17>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<16>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<17>
-    SLICE_X26Y61.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<17>
-    SLICE_X26Y61.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<19>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<18>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<19>
-    SLICE_X26Y62.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<19>
-    SLICE_X26Y62.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<21>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<20>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<21>
-    SLICE_X26Y63.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<21>
-    SLICE_X26Y63.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<23>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<22>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<23>
-    SLICE_X26Y64.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<23>
-    SLICE_X26Y64.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<25>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<24>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<25>
-    SLICE_X26Y65.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<25>
-    SLICE_X26Y65.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<27>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<26>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<27>
-    SLICE_X26Y66.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<27>
-    SLICE_X26Y66.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<29>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<28>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<29>
-    SLICE_X26Y67.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<29>
-    SLICE_X26Y67.COUT    Tbyp                  0.130   XLXI_21/state_cmp_le0000
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<30>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<31>
-    SLICE_X38Y53.F4      net (fanout=2)        1.632   XLXI_21/state_cmp_le0000
-    SLICE_X38Y53.X       Tilo                  0.759   XLXI_21/state_FSM_N3
-                                                       XLXI_21/state_FSM_FFd1-In21
-    SLICE_X38Y54.SR      net (fanout=6)        1.438   XLXI_21/state_FSM_N3
-    SLICE_X38Y54.CLK     Tsrck                 0.910   XLXI_21/state_FSM_FFd2_1
-                                                       XLXI_21/state_FSM_FFd2_1
+    SLICE_X29Y53.XQ      Tcko                  0.591   XLXI_21/noteIndex<0>
+                                                       XLXI_21/noteIndex_0
+    SLICE_X41Y52.F4      net (fanout=6)        1.716   XLXI_21/noteIndex<0>
+    SLICE_X41Y52.X       Tilo                  0.704   XLXI_21/N51
+                                                       XLXI_21/frequencyModCount<2>11
+    SLICE_X44Y51.F3      net (fanout=5)        1.409   XLXI_21/N51
+    SLICE_X44Y51.COUT    Topcyf                1.162   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_lut<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.XB      Tcinxb                0.495   XLXI_7/modCount_cmp_ge0000
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20>
+    SLICE_X45Y58.SR      net (fanout=17)       1.269   XLXI_7/modCount_cmp_ge0000
+    SLICE_X45Y58.CLK     Tsrck                 0.910   XLXI_7/modCount<20>
+                                                       XLXI_7/modCount_21
     -------------------------------------------------  ---------------------------
-    Total                                      9.251ns (5.402ns logic, 3.849ns route)
-                                                       (58.4% logic, 41.6% route)
+    Total                                      9.166ns (4.772ns logic, 4.394ns route)
+                                                       (52.1% logic, 47.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     10.785ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_21/playedNoteIndex_2 (FF)
-  Destination:          XLXI_21/state_FSM_FFd2_1 (FF)
+Slack (setup path):     10.969ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_21/noteIndex_2 (FF)
+  Destination:          XLXI_7/modCount_21 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      9.213ns (Levels of Logic = 16)
-  Clock Path Skew:      -0.002ns (0.114 - 0.116)
+  Data Path Delay:      9.008ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.023ns (0.091 - 0.114)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_21/playedNoteIndex_2 to XLXI_21/state_FSM_FFd2_1
+  Maximum Data Path: XLXI_21/noteIndex_2 to XLXI_7/modCount_21
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X28Y53.XQ      Tcko                  0.592   XLXI_21/playedNoteIndex<2>
-                                                       XLXI_21/playedNoteIndex_2
-    SLICE_X26Y53.F1      net (fanout=3)        0.900   XLXI_21/playedNoteIndex<2>
-    SLICE_X26Y53.COUT    Topcyf                1.162   XLXI_21/Mcompar_state_cmp_le0000_cy<3>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_lut<2>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<2>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<3>
-    SLICE_X26Y54.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<3>
-    SLICE_X26Y54.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<5>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<4>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<5>
-    SLICE_X26Y55.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<5>
-    SLICE_X26Y55.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<7>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<6>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<7>
-    SLICE_X26Y56.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<7>
-    SLICE_X26Y56.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<9>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<8>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<9>
-    SLICE_X26Y57.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<9>
-    SLICE_X26Y57.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<11>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<10>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<11>
-    SLICE_X26Y58.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<11>
-    SLICE_X26Y58.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<13>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<12>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<13>
-    SLICE_X26Y59.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<13>
-    SLICE_X26Y59.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<15>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<14>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<15>
-    SLICE_X26Y60.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<15>
-    SLICE_X26Y60.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<17>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<16>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<17>
-    SLICE_X26Y61.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<17>
-    SLICE_X26Y61.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<19>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<18>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<19>
-    SLICE_X26Y62.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<19>
-    SLICE_X26Y62.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<21>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<20>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<21>
-    SLICE_X26Y63.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<21>
-    SLICE_X26Y63.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<23>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<22>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<23>
-    SLICE_X26Y64.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<23>
-    SLICE_X26Y64.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<25>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<24>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<25>
-    SLICE_X26Y65.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<25>
-    SLICE_X26Y65.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<27>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<26>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<27>
-    SLICE_X26Y66.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<27>
-    SLICE_X26Y66.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<29>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<28>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<29>
-    SLICE_X26Y67.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<29>
-    SLICE_X26Y67.COUT    Tbyp                  0.130   XLXI_21/state_cmp_le0000
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<30>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<31>
-    SLICE_X38Y53.F4      net (fanout=2)        1.632   XLXI_21/state_cmp_le0000
-    SLICE_X38Y53.X       Tilo                  0.759   XLXI_21/state_FSM_N3
-                                                       XLXI_21/state_FSM_FFd1-In21
-    SLICE_X38Y54.SR      net (fanout=6)        1.438   XLXI_21/state_FSM_N3
-    SLICE_X38Y54.CLK     Tsrck                 0.910   XLXI_21/state_FSM_FFd2_1
-                                                       XLXI_21/state_FSM_FFd2_1
+    SLICE_X29Y54.XQ      Tcko                  0.591   XLXI_21/noteIndex<2>
+                                                       XLXI_21/noteIndex_2
+    SLICE_X41Y52.F1      net (fanout=6)        1.558   XLXI_21/noteIndex<2>
+    SLICE_X41Y52.X       Tilo                  0.704   XLXI_21/N51
+                                                       XLXI_21/frequencyModCount<2>11
+    SLICE_X44Y51.F3      net (fanout=5)        1.409   XLXI_21/N51
+    SLICE_X44Y51.COUT    Topcyf                1.162   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_lut<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.XB      Tcinxb                0.495   XLXI_7/modCount_cmp_ge0000
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20>
+    SLICE_X45Y58.SR      net (fanout=17)       1.269   XLXI_7/modCount_cmp_ge0000
+    SLICE_X45Y58.CLK     Tsrck                 0.910   XLXI_7/modCount<20>
+                                                       XLXI_7/modCount_21
     -------------------------------------------------  ---------------------------
-    Total                                      9.213ns (5.243ns logic, 3.970ns route)
-                                                       (56.9% logic, 43.1% route)
+    Total                                      9.008ns (4.772ns logic, 4.236ns route)
+                                                       (53.0% logic, 47.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     10.990ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               XLXI_21/playedNoteIndex_1 (FF)
-  Destination:          XLXI_21/state_FSM_FFd2_1 (FF)
+Slack (setup path):     10.973ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               XLXI_21/noteIndex_0 (FF)
+  Destination:          XLXI_7/modCount_21 (FF)
   Requirement:          20.000ns
-  Data Path Delay:      9.008ns (Levels of Logic = 17)
-  Clock Path Skew:      -0.002ns (0.114 - 0.116)
+  Data Path Delay:      9.002ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.025ns (0.091 - 0.116)
   Source Clock:         Clk_50MHz_BUFGP rising at 0.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: XLXI_21/playedNoteIndex_1 to XLXI_21/state_FSM_FFd2_1
+  Maximum Data Path: XLXI_21/noteIndex_0 to XLXI_7/modCount_21
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X28Y52.YQ      Tcko                  0.652   XLXI_21/playedNoteIndex<0>
-                                                       XLXI_21/playedNoteIndex_1
-    SLICE_X26Y52.G2      net (fanout=3)        0.779   XLXI_21/playedNoteIndex<1>
-    SLICE_X26Y52.COUT    Topcyg                0.888   XLXI_21/Mcompar_state_cmp_le0000_cy<1>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<1>
-    SLICE_X26Y53.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<1>
-    SLICE_X26Y53.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<3>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<2>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<3>
-    SLICE_X26Y54.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<3>
-    SLICE_X26Y54.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<5>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<4>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<5>
-    SLICE_X26Y55.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<5>
-    SLICE_X26Y55.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<7>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<6>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<7>
-    SLICE_X26Y56.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<7>
-    SLICE_X26Y56.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<9>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<8>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<9>
-    SLICE_X26Y57.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<9>
-    SLICE_X26Y57.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<11>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<10>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<11>
-    SLICE_X26Y58.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<11>
-    SLICE_X26Y58.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<13>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<12>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<13>
-    SLICE_X26Y59.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<13>
-    SLICE_X26Y59.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<15>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<14>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<15>
-    SLICE_X26Y60.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<15>
-    SLICE_X26Y60.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<17>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<16>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<17>
-    SLICE_X26Y61.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<17>
-    SLICE_X26Y61.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<19>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<18>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<19>
-    SLICE_X26Y62.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<19>
-    SLICE_X26Y62.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<21>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<20>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<21>
-    SLICE_X26Y63.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<21>
-    SLICE_X26Y63.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<23>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<22>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<23>
-    SLICE_X26Y64.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<23>
-    SLICE_X26Y64.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<25>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<24>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<25>
-    SLICE_X26Y65.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<25>
-    SLICE_X26Y65.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<27>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<26>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<27>
-    SLICE_X26Y66.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<27>
-    SLICE_X26Y66.COUT    Tbyp                  0.130   XLXI_21/Mcompar_state_cmp_le0000_cy<29>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<28>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<29>
-    SLICE_X26Y67.CIN     net (fanout=1)        0.000   XLXI_21/Mcompar_state_cmp_le0000_cy<29>
-    SLICE_X26Y67.COUT    Tbyp                  0.130   XLXI_21/state_cmp_le0000
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<30>
-                                                       XLXI_21/Mcompar_state_cmp_le0000_cy<31>
-    SLICE_X38Y53.F4      net (fanout=2)        1.632   XLXI_21/state_cmp_le0000
-    SLICE_X38Y53.X       Tilo                  0.759   XLXI_21/state_FSM_N3
-                                                       XLXI_21/state_FSM_FFd1-In21
-    SLICE_X38Y54.SR      net (fanout=6)        1.438   XLXI_21/state_FSM_N3
-    SLICE_X38Y54.CLK     Tsrck                 0.910   XLXI_21/state_FSM_FFd2_1
-                                                       XLXI_21/state_FSM_FFd2_1
+    SLICE_X29Y53.XQ      Tcko                  0.591   XLXI_21/noteIndex<0>
+                                                       XLXI_21/noteIndex_0
+    SLICE_X41Y52.F4      net (fanout=6)        1.716   XLXI_21/noteIndex<0>
+    SLICE_X41Y52.X       Tilo                  0.704   XLXI_21/N51
+                                                       XLXI_21/frequencyModCount<2>11
+    SLICE_X44Y50.F4      net (fanout=5)        1.115   XLXI_21/N51
+    SLICE_X44Y50.COUT    Topcyf                1.162   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_lut<2>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<2>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>
+    SLICE_X44Y51.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>
+    SLICE_X44Y51.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>
+    SLICE_X44Y52.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>
+    SLICE_X44Y53.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>
+    SLICE_X44Y54.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>
+    SLICE_X44Y55.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>
+    SLICE_X44Y56.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>
+    SLICE_X44Y57.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>
+    SLICE_X44Y58.COUT    Tbyp                  0.130   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.CIN     net (fanout=1)        0.000   XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>
+    SLICE_X44Y59.XB      Tcinxb                0.495   XLXI_7/modCount_cmp_ge0000
+                                                       XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20>
+    SLICE_X45Y58.SR      net (fanout=17)       1.269   XLXI_7/modCount_cmp_ge0000
+    SLICE_X45Y58.CLK     Tsrck                 0.910   XLXI_7/modCount<20>
+                                                       XLXI_7/modCount_21
     -------------------------------------------------  ---------------------------
-    Total                                      9.008ns (5.159ns logic, 3.849ns route)
-                                                       (57.3% logic, 42.7% route)
+    Total                                      9.002ns (4.902ns logic, 4.100ns route)
+                                                       (54.5% logic, 45.5% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "Clk_50MHz_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_20/reg11b_8 (SLICE_X53Y52.BX), 1 path
+Paths for end point XLXI_21/state_1 (SLICE_X37Y58.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.974ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_20/reg11b_9 (FF)
-  Destination:          XLXI_20/reg11b_8 (FF)
+Slack (hold path):      0.931ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_21/nextState_1 (FF)
+  Destination:          XLXI_21/state_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.969ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.005ns (0.027 - 0.032)
-  Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
-  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: XLXI_20/reg11b_9 to XLXI_20/reg11b_8
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X55Y55.YQ      Tcko                  0.470   XLXI_20/reg11b<10>
-                                                       XLXI_20/reg11b_9
-    SLICE_X53Y52.BX      net (fanout=2)        0.406   XLXI_20/reg11b<9>
-    SLICE_X53Y52.CLK     Tckdi       (-Th)    -0.093   XLXN_75<7>
-                                                       XLXI_20/reg11b_8
-    -------------------------------------------------  ---------------------------
-    Total                                      0.969ns (0.563ns logic, 0.406ns route)
-                                                       (58.1% logic, 41.9% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point XLXI_20/cntMod11_0 (SLICE_X65Y63.BX), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      1.028ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_20/cntMod11_0 (FF)
-  Destination:          XLXI_20/cntMod11_0 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      1.028ns (Levels of Logic = 0)
+  Data Path Delay:      0.931ns (Levels of Logic = 0)
   Clock Path Skew:      0.000ns
   Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: XLXI_20/cntMod11_0 to XLXI_20/cntMod11_0
+  Minimum Data Path: XLXI_21/nextState_1 to XLXI_21/state_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X65Y63.XQ      Tcko                  0.473   XLXI_20/cntMod11<0>
-                                                       XLXI_20/cntMod11_0
-    SLICE_X65Y63.BX      net (fanout=5)        0.462   XLXI_20/cntMod11<0>
-    SLICE_X65Y63.CLK     Tckdi       (-Th)    -0.093   XLXI_20/cntMod11<0>
-                                                       XLXI_20/cntMod11_0
+    SLICE_X36Y59.XQ      Tcko                  0.474   XLXI_21/nextState<1>
+                                                       XLXI_21/nextState_1
+    SLICE_X37Y58.BX      net (fanout=1)        0.364   XLXI_21/nextState<1>
+    SLICE_X37Y58.CLK     Tckdi       (-Th)    -0.093   XLXI_21/state<1>
+                                                       XLXI_21/state_1
     -------------------------------------------------  ---------------------------
-    Total                                      1.028ns (0.566ns logic, 0.462ns route)
-                                                       (55.1% logic, 44.9% route)
+    Total                                      0.931ns (0.567ns logic, 0.364ns route)
+                                                       (60.9% logic, 39.1% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point XLXI_20/reg11b_9 (SLICE_X55Y55.BY), 1 path
+Paths for end point XLXI_21/state_3 (SLICE_X41Y59.BX), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.036ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               XLXI_20/reg11b_10 (FF)
-  Destination:          XLXI_20/reg11b_9 (FF)
+Slack (hold path):      0.935ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_21/nextState_3 (FF)
+  Destination:          XLXI_21/state_3 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.036ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
+  Data Path Delay:      0.931ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.004ns (0.036 - 0.040)
   Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
   Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: XLXI_20/reg11b_10 to XLXI_20/reg11b_9
+  Minimum Data Path: XLXI_21/nextState_3 to XLXI_21/state_3
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X55Y55.XQ      Tcko                  0.473   XLXI_20/reg11b<10>
-                                                       XLXI_20/reg11b_10
-    SLICE_X55Y55.BY      net (fanout=2)        0.428   XLXI_20/reg11b<10>
-    SLICE_X55Y55.CLK     Tckdi       (-Th)    -0.135   XLXI_20/reg11b<10>
-                                                       XLXI_20/reg11b_9
+    SLICE_X38Y59.XQ      Tcko                  0.474   XLXI_21/nextState<3>
+                                                       XLXI_21/nextState_3
+    SLICE_X41Y59.BX      net (fanout=1)        0.364   XLXI_21/nextState<3>
+    SLICE_X41Y59.CLK     Tckdi       (-Th)    -0.093   XLXI_21/state<3>
+                                                       XLXI_21/state_3
     -------------------------------------------------  ---------------------------
-    Total                                      1.036ns (0.608ns logic, 0.428ns route)
-                                                       (58.7% logic, 41.3% route)
+    Total                                      0.931ns (0.567ns logic, 0.364ns route)
+                                                       (60.9% logic, 39.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point XLXI_21/state_7 (SLICE_X34Y60.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.959ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               XLXI_21/nextState_7 (FF)
+  Destination:          XLXI_21/state_7 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.961ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.042 - 0.040)
+  Source Clock:         Clk_50MHz_BUFGP rising at 20.000ns
+  Destination Clock:    Clk_50MHz_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: XLXI_21/nextState_7 to XLXI_21/state_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X34Y62.XQ      Tcko                  0.474   XLXI_21/nextState<7>
+                                                       XLXI_21/nextState_7
+    SLICE_X34Y60.BX      net (fanout=1)        0.353   XLXI_21/nextState<7>
+    SLICE_X34Y60.CLK     Tckdi       (-Th)    -0.134   XLXI_21/state<7>
+                                                       XLXI_21/state_7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.961ns (0.608ns logic, 0.353ns route)
+                                                       (63.3% logic, 36.7% route)
 
 --------------------------------------------------------------------------------
 
@@ -670,7 +722,7 @@ Slack: 18.348ns (period - (min low pulse limit / (low pulse / period)))
   Low pulse limit: 0.826ns (Tcl)
   Physical resource: XLXI_21/playedNoteIndex<0>/CLK
   Logical resource: XLXI_21/playedNoteIndex_0/CK
-  Location pin: SLICE_X28Y52.CLK
+  Location pin: SLICE_X32Y53.CLK
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.348ns (period - (min high pulse limit / (high pulse / period)))
@@ -679,7 +731,7 @@ Slack: 18.348ns (period - (min high pulse limit / (high pulse / period)))
   High pulse limit: 0.826ns (Tch)
   Physical resource: XLXI_21/playedNoteIndex<0>/CLK
   Logical resource: XLXI_21/playedNoteIndex_0/CK
-  Location pin: SLICE_X28Y52.CLK
+  Location pin: SLICE_X32Y53.CLK
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 Slack: 18.348ns (period - min period limit)
@@ -687,7 +739,7 @@ Slack: 18.348ns (period - min period limit)
   Min period limit: 1.652ns (605.327MHz) (Tcp)
   Physical resource: XLXI_21/playedNoteIndex<0>/CLK
   Logical resource: XLXI_21/playedNoteIndex_0/CK
-  Location pin: SLICE_X28Y52.CLK
+  Location pin: SLICE_X32Y53.CLK
   Clock network: Clk_50MHz_BUFGP
 --------------------------------------------------------------------------------
 
@@ -704,7 +756,7 @@ Clock to Setup on destination clock Clk_50MHz
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk_50MHz      |   10.276|         |         |         |
+Clk_50MHz      |    9.264|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -713,16 +765,16 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 15503 paths, 0 nets, and 1776 connections
+Constraints cover 11511 paths, 0 nets, and 1576 connections
 
 Design statistics:
-   Minimum period:  10.276ns{1}   (Maximum frequency:  97.314MHz)
+   Minimum period:   9.264ns{1}   (Maximum frequency: 107.945MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Thu May 09 10:32:06 2024 
+Analysis completed Tue May 21 21:34:42 2024 
 --------------------------------------------------------------------------------
 
 Trace Settings:

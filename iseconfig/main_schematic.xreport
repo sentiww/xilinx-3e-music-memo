@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-05-09T08:28:25</DateModified>
+  <DateModified>2024-05-21T17:42:31</DateModified>
   <ModuleName>main_schematic</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/iseconfig/main_schematic.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232/iseconfig/main_schematic.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/wojci/Downloads/xilinx-3e-music-memo-rs232\</ImplementationReportsDirectory>
   <DateInitialized>2024-04-24T19:29:50</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
