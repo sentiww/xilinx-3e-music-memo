@@ -1,0 +1,12 @@
+vhdtdtfi -lib work button_keyboard.vhd -prj xilinx-3e-music-memo -o button_keyboard.spl -module button_keyboard -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e button_keyboard.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.sym 
+vhdtdtfi -lib work button_keyboard.vhd -prj xilinx-3e-music-memo -o button_keyboard.spl -module button_keyboard -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e button_keyboard.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.sym 
+vhdtdtfi -lib work button_keyboard.vhd -prj xilinx-3e-music-memo -o button_keyboard.spl -module button_keyboard -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e button_keyboard.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.sym 
+vhdtdtfi -lib work button_keyboard.vhd -prj xilinx-3e-music-memo -o button_keyboard.spl -module button_keyboard -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e button_keyboard.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.sym 
+vhdtdtfi -lib work button_keyboard.vhd -prj xilinx-3e-music-memo -o button_keyboard.spl -module button_keyboard -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e button_keyboard.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.sym 
+vhdtdtfi -lib work button_keyboard.vhd -prj xilinx-3e-music-memo -o button_keyboard.spl -module button_keyboard -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e button_keyboard.spl C:/Users/wojci/xilinx-3e-music-memo/xilinx-3e-music-memo/button_keyboard.sym 

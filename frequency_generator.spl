@@ -1,0 +1,8 @@
+[Inputs]
+clk
+reset
+=frequencyModCount[15:0]=
+[Outputs]
+start
+=saw[11:0]=
+[BiDir]

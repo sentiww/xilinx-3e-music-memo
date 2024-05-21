@@ -1,0 +1,8 @@
+[Inputs]
+rxRdy
+f0
+clk
+=scan[7:0]=
+[Outputs]
+=frequencyModCount[15:0]=
+[BiDir]

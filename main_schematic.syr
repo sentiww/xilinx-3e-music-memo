@@ -1,0 +1,573 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: main_schematic.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main_schematic.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main_schematic"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : main_schematic
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/frequency_generator.vhd" in Library work.
+Architecture behavioral of Entity frequency_generator is up to date.
+Compiling vhdl file "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/rs232_keyboard_to_frequency.vhd" in Library work.
+Entity <rs232_keyboard_to_frequency> compiled.
+Entity <rs232_keyboard_to_frequency> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/main_schematic.vhf" in Library work.
+Architecture behavioral of Entity main_schematic is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main_schematic> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <frequency_generator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <rs232_keyboard_to_frequency> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main_schematic> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/main_schematic.vhf" line 106: Instantiating black box module <DACWrite>.
+WARNING:Xst:753 - "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/main_schematic.vhf" line 133: Unconnected output port 'E0' of component 'PS2_Kbd'.
+WARNING:Xst:2211 - "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/main_schematic.vhf" line 133: Instantiating black box module <PS2_Kbd>.
+Entity <main_schematic> analyzed. Unit <main_schematic> generated.
+
+Analyzing Entity <frequency_generator> in library <work> (Architecture <behavioral>).
+Entity <frequency_generator> analyzed. Unit <frequency_generator> generated.
+
+Analyzing Entity <rs232_keyboard_to_frequency> in library <work> (Architecture <behavioral>).
+INFO:Xst:1432 - Contents of array <notes> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <notes> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:819 - "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/rs232_keyboard_to_frequency.vhd" line 85: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <noteIndex>, <playedNoteIndex>, <inputNoteIndex>, <notesCount>, <inputNote>, <notes>
+INFO:Xst:1432 - Contents of array <notes> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <notes> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <rs232_keyboard_to_frequency> analyzed. Unit <rs232_keyboard_to_frequency> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <notes<0>> in unit <rs232_keyboard_to_frequency> has a constant value of 0001011101010100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <notes<1>> in unit <rs232_keyboard_to_frequency> has a constant value of 0001001110011110 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <notes<2>> in unit <rs232_keyboard_to_frequency> has a constant value of 0001011101010100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <notes<3>> in unit <rs232_keyboard_to_frequency> has a constant value of 0000111010110010 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <notes<4>> in unit <rs232_keyboard_to_frequency> has a constant value of 0001011101010100 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <frequency_generator>.
+    Related source file is "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/frequency_generator.vhd".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Register <updateStart> equivalent to <startInternal<0>> has been removed
+WARNING:Xst:643 - "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/frequency_generator.vhd" line 76: The result of a 32x8-bit multiplication is partially used. Only the 12 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 32-bit up counter for signal <count>.
+    Found 32-bit up counter for signal <modCount>.
+    Found 32-bit comparator greatequal for signal <modCount$cmp_ge0000> created at line 52.
+    Found 32x8-bit multiplier for signal <saw$mult0001> created at line 76.
+    Found 1-bit register for signal <startInternal<0>>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplier(s).
+	inferred   1 Comparator(s).
+Unit <frequency_generator> synthesized.
+
+
+Synthesizing Unit <rs232_keyboard_to_frequency>.
+    Related source file is "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/rs232_keyboard_to_frequency.vhd".
+WARNING:Xst:653 - Signal <notesCount> is used but never assigned. This sourceless signal will be automatically connected to value 00000000000000000000000000000101.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | startstate                                     |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5x16-bit ROM for signal <$varindex0001> created at line 155.
+    Found 5x16-bit ROM for signal <$varindex0000> created at line 113.
+    Found 31-bit up counter for signal <counter>.
+    Found 16-bit register for signal <inputNote>.
+    Found 32-bit up counter for signal <inputNoteIndex>.
+    Found 32-bit up counter for signal <noteIndex>.
+    Found 16-bit register for signal <outputNote>.
+    Found 32-bit up counter for signal <playedNoteIndex>.
+    Found 31-bit up counter for signal <playSoundCounter>.
+    Found 31-bit comparator greater for signal <playSoundCounter$cmp_gt0000> created at line 203.
+    Found 31-bit comparator less for signal <playSoundCounter$cmp_lt0000> created at line 203.
+    Found 1-bit register for signal <playSoundTimeout>.
+    Found 32-bit subtractor for signal <state$addsub0000> created at line 105.
+    Found 32-bit comparator equal for signal <state$cmp_eq0000> created at line 105.
+    Found 16-bit comparator equal for signal <state$cmp_eq0001> created at line 113.
+    Found 32-bit comparator lessequal for signal <state$cmp_le0000> created at line 94.
+    Found 32-bit comparator lessequal for signal <state$cmp_le0001> created at line 104.
+    Found 1-bit register for signal <timeout>.
+    Found 31-bit comparator less for signal <timeout$cmp_lt0000> created at line 190.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 ROM(s).
+	inferred   5 Counter(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+Unit <rs232_keyboard_to_frequency> synthesized.
+
+
+Synthesizing Unit <main_schematic>.
+    Related source file is "C:/Users/lab/Desktop/pw/xilinx-3e-music-memo-state-machine-code/main_schematic.vhf".
+Unit <main_schematic> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 5x16-bit ROM                                          : 2
+# Multipliers                                          : 1
+ 32x8-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 1
+ 32-bit subtractor                                     : 1
+# Counters                                             : 7
+ 31-bit up counter                                     : 2
+ 32-bit up counter                                     : 5
+# Registers                                            : 5
+ 1-bit register                                        : 3
+ 16-bit register                                       : 2
+# Comparators                                          : 8
+ 16-bit comparator equal                               : 1
+ 31-bit comparator greater                             : 1
+ 31-bit comparator less                                : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <XLXI_21/state/FSM> on signal <state[1:7]> with one-hot encoding.
+---------------------------------
+ State               | Encoding
+---------------------------------
+ startstate          | 0000001
+ playnotestate       | 0000010
+ inputnotestate      | 0001000
+ validationnotestate | 0010000
+ invalidnotestate    | 1000000
+ gameoverstate       | 0100000
+ incplaynotestate    | 0000100
+---------------------------------
+Reading core <DACWrite.ngc>.
+Reading core <PS2_Kbd.ngc>.
+Loading core <DACWrite> for timing and area information for instance <XLXI_1>.
+Loading core <PS2_Kbd> for timing and area information for instance <XLXI_20>.
+INFO:Xst:2261 - The FF/Latch <inputNote_13> in Unit <XLXI_21> is equivalent to the following 2 FFs/Latches, which will be removed : <inputNote_14> <inputNote_15> 
+WARNING:Xst:1293 - FF/Latch <inputNote_13> has a constant value of 0 in block <XLXI_21>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <rs232_keyboard_to_frequency>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom__varindex0001> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <rs232_keyboard_to_frequency> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 2
+ 5x16-bit ROM                                          : 2
+# Multipliers                                          : 1
+ 32x8-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 1
+ 32-bit subtractor                                     : 1
+# Counters                                             : 7
+ 31-bit up counter                                     : 2
+ 32-bit up counter                                     : 5
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+# Comparators                                          : 8
+ 16-bit comparator equal                               : 1
+ 31-bit comparator greater                             : 1
+ 31-bit comparator less                                : 2
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greatequal                          : 1
+ 32-bit comparator lessequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <inputNote_13> has a constant value of 0 in block <rs232_keyboard_to_frequency>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inputNote_14> has a constant value of 0 in block <rs232_keyboard_to_frequency>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <inputNote_15> has a constant value of 0 in block <rs232_keyboard_to_frequency>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <outputNote_0> has a constant value of 0 in block <rs232_keyboard_to_frequency>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <outputNote_13> has a constant value of 0 in block <rs232_keyboard_to_frequency>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <outputNote_14> has a constant value of 0 in block <rs232_keyboard_to_frequency>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <outputNote_15> has a constant value of 0 in block <rs232_keyboard_to_frequency>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Mmult_saw_mult00011> of sequential type is unconnected in block <frequency_generator>.
+INFO:Xst:2261 - The FF/Latch <outputNote_2> in Unit <rs232_keyboard_to_frequency> is equivalent to the following 2 FFs/Latches, which will be removed : <outputNote_8> <outputNote_12> 
+INFO:Xst:2261 - The FF/Latch <outputNote_1> in Unit <rs232_keyboard_to_frequency> is equivalent to the following FF/Latch, which will be removed : <outputNote_7> 
+INFO:Xst:2261 - The FF/Latch <outputNote_4> in Unit <rs232_keyboard_to_frequency> is equivalent to the following FF/Latch, which will be removed : <outputNote_9> 
+INFO:Xst:2261 - The FF/Latch <outputNote_5> in Unit <rs232_keyboard_to_frequency> is equivalent to the following FF/Latch, which will be removed : <outputNote_11> 
+
+Optimizing unit <main_schematic> ...
+
+Optimizing unit <frequency_generator> ...
+
+Optimizing unit <rs232_keyboard_to_frequency> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main_schematic, actual ratio is 6.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 252
+ Flip-Flops                                            : 252
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main_schematic.ngr
+Top Level Output File Name         : main_schematic
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 1122
+#      GND                         : 3
+#      INV                         : 27
+#      LUT1                        : 228
+#      LUT2                        : 97
+#      LUT2_L                      : 1
+#      LUT3                        : 63
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 89
+#      LUT4_D                      : 5
+#      LUT4_L                      : 7
+#      MUXCY                       : 361
+#      MUXF5                       : 4
+#      VCC                         : 3
+#      XORCY                       : 230
+# FlipFlops/Latches                : 344
+#      FD                          : 20
+#      FDE                         : 57
+#      FDR                         : 123
+#      FDRE                        : 137
+#      FDRS                        : 3
+#      FDRSE                       : 2
+#      FDS                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 4
+#      OBUF                        : 10
+# MULTs                            : 1
+#      MULT18X18SIO                : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      290  out of   4656     6%  
+ Number of Slice Flip Flops:            344  out of   9312     3%  
+ Number of 4 input LUTs:                521  out of   9312     5%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of MULT18X18SIOs:                 1  out of     20     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_50MHz                          | BUFGP                  | 344   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.742ns (Maximum Frequency: 114.396MHz)
+   Minimum input arrival time before clock: 4.076ns
+   Maximum output required time after clock: 5.620ns
+   Maximum combinational path delay: 7.214ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_50MHz'
+  Clock period: 8.742ns (frequency: 114.396MHz)
+  Total number of paths / destination ports: 13436 / 795
+-------------------------------------------------------------------------
+Delay:               8.742ns (Levels of Logic = 23)
+  Source:            XLXI_21/state_FSM_FFd4 (FF)
+  Destination:       XLXI_7/startInternal_0 (FF)
+  Source Clock:      Clk_50MHz rising
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: XLXI_21/state_FSM_FFd4 to XLXI_7/startInternal_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             19   0.591   1.089  XLXI_21/state_FSM_FFd4 (XLXI_21/state_FSM_FFd4)
+     LUT4:I3->O            1   0.704   0.499  XLXI_21/frequencyModCount<1>1 (XLXN_69<1>)
+     LUT2:I1->O            1   0.704   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_lut<1> (XLXI_7/Mcompar_modCount_cmp_ge0000_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<1> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<2> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19> (XLXI_7/Mcompar_modCount_cmp_ge0000_cy<19>)
+     MUXCY:CI->O          33   0.331   1.263  XLXI_7/Mcompar_modCount_cmp_ge0000_cy<20> (XLXI_7/modCount_cmp_ge0000)
+     INV:I->O              1   0.704   0.420  XLXI_7/startInternal_0_not00011_INV_0 (XLXI_7/startInternal_0_not0001)
+     FDR:R                     0.911          XLXI_7/startInternal_0
+    ----------------------------------------
+    Total                      8.742ns (5.471ns logic, 3.271ns route)
+                                       (62.6% logic, 37.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              4.076ns (Levels of Logic = 3)
+  Source:            RESET (PAD)
+  Destination:       XLXI_1/Cnt_0 (FF)
+  Destination Clock: Clk_50MHz rising
+
+  Data Path: RESET to XLXI_1/Cnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.610  RESET_IBUF (RESET_IBUF)
+     begin scope: 'XLXI_1'
+     LUT2:I1->O            5   0.704   0.633  Cnt_or00001 (Cnt_or0000)
+     FDR:R                     0.911          Cnt_0
+    ----------------------------------------
+    Total                      4.076ns (2.833ns logic, 1.243ns route)
+                                       (69.5% logic, 30.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_50MHz'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              5.620ns (Levels of Logic = 3)
+  Source:            XLXI_1/iBusy (FF)
+  Destination:       DAC_CS (PAD)
+  Source Clock:      Clk_50MHz rising
+
+  Data Path: XLXI_1/iBusy to DAC_CS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRSE:C->Q            5   0.591   0.633  iBusy (iBusy)
+     INV:I->O              1   0.704   0.420  DAC_CS1_INV_0 (DAC_CS)
+     end scope: 'XLXI_1'
+     OBUF:I->O                 3.272          DAC_CS_OBUF (DAC_CS)
+    ----------------------------------------
+    Total                      5.620ns (4.567ns logic, 1.053ns route)
+                                       (81.3% logic, 18.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               7.214ns (Levels of Logic = 4)
+  Source:            Clk_50MHz (PAD)
+  Destination:       SPI_SCK (PAD)
+
+  Data Path: Clk_50MHz to SPI_SCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O          345   1.457   1.361  Clk_50MHz_BUFGP (Clk_50MHz_BUFGP)
+     begin scope: 'XLXI_1'
+     INV:I->O              1   0.704   0.420  SPI_SCK1_INV_0 (SPI_SCK)
+     end scope: 'XLXI_1'
+     OBUF:I->O                 3.272          SPI_SCK_OBUF (SPI_SCK)
+    ----------------------------------------
+    Total                      7.214ns (5.433ns logic, 1.781ns route)
+                                       (75.3% logic, 24.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.15 secs
+ 
+--> 
+
+Total memory usage is 4532204 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+
