@@ -41,7 +41,7 @@ end rs232_keyboard_to_frequency;
 architecture Behavioral of rs232_keyboard_to_frequency is
 
 	-- state machine 
-	type stateType is ( StartState, PlayNoteState, InputNoteState, ValidationNoteState, InvalidNoteState, GameoverState, IncNoteState, SilenceState, IncInputNoteState, HarmonicaState );
+	type stateType is ( StartState, PlayNoteState, InputNoteState, ValidationNoteState, InvalidNoteState, GameoverState, IncPlayState, SilenceState, IncInputState, HarmonicaState );
 	signal state, nextState : stateType;
 	
 	-- context
@@ -69,7 +69,7 @@ architecture Behavioral of rs232_keyboard_to_frequency is
 	constant MAX_COUNT : natural := 150000000; -- number of cycles in 3 seconds in 50 MHz clokc
 	
 	-- 0 - memo game
-	-- 1 - keyboard
+	-- 1 - harmonica
 	signal mode : std_logic := '0';
 
 begin
@@ -90,38 +90,44 @@ begin
 
 			case state is
 				when HarmonicaState => 
-					nextState <= StartState;
-			
+					if mode = '1' then 
+						nextState <= HarmonicaState;
+					else 
+						nextState <= StartState;
+					end if; 
+
 				when StartState => 
 					nextState <= PlayNoteState;
 					
 				when PlayNoteState => 
-					if noteIndex < playedNoteIndex then 
-						nextState <= PlayNoteState;
+					if noteIndex < playedNoteIndex then
+						nextState <= SilenceState;
 					else
-						nextState <= IncNoteState;
+						nextState <= IncPlayState;
 					end if;
 					
-				when IncNoteState => 
+				when IncPlayState => 
 					nextState <= InputNoteState;
 				
-				when InputNoteState => 
-					if inputNoteIndex < playedNoteIndex then
+				when InputNoteState =>  -- TODO if does not work => change from IncInputState to PlayNoteState
+					if inputNoteIndex < playedNoteIndex and to_integer(unsigned(inputNote)) = 0 then
+						nextState <= InputNoteState;
+					elsif inputNoteIndex < playedNoteIndex and to_integer(unsigned(inputNote)) > 0 then 
 						nextState <= ValidationNoteState;
 					elsif inputNoteIndex = notesCount - 1 then
 						nextState <= GameoverState;
-					else
+					elsif inputNoteIndex = playedNoteIndex then
 						nextState <= PlayNoteState;
 					end if;
 				
 				when ValidationNoteState => 
-					if to_integer(unsigned(inputNote)) = to_integer(unsigned(notes(inputNoteIndex))) then -- TODO add && condition duration +- 25% 
-						nextState <= IncInputNoteState;
+					if to_integer(unsigned(inputNote)) = to_integer(unsigned(notes(inputNoteIndex))) then 
+						nextState <= IncInputState;
 					else
 						nextState <= InvalidNoteState;
 					end if;
 					
-				when IncInputNoteState => 
+				when IncInputState => 
 					nextState <= InputNoteState;
 					
 				when InvalidNoteState => 
@@ -162,12 +168,12 @@ begin
 	end process;
 	
 	
-	process(clk) -- IncNoteState
+	process(clk) -- IncPlayState
 	begin 
 		if rising_edge(clk) and timeout = '1'  then
 			if state = InvalidNoteState or state = GameoverState or state = StartState then --reset
 				playedNoteIndex <= 0;
-			elsif state = IncNoteState then 
+			elsif state = IncPlayState then 
 				playedNoteIndex <= playedNoteIndex + 1;
 			end if;
 		end if; 
@@ -179,7 +185,7 @@ begin
 		if rising_edge(clk) and timeout = '1' then
 			if state = InvalidNoteState or state = GameoverState or state = PlayNoteState or state = StartState then --reset
 				inputNoteIndex <= 0;
-			elsif state = IncInputNoteState then
+			elsif state = IncInputState then
 				inputNoteIndex <= inputNoteIndex + 1; 
 			end if;
 		end if; 
@@ -199,60 +205,33 @@ begin
 		end if;
 	end process;
 	
+	
+	process(clk, rxRdy, f0) -- Input from keyboard 
+	begin
+		if (rising_edge(clk)) then
+			if (rxRdy = '1' and (state = InputNoteState or state = HarmonicaState)) then -- f0 if key is pressed 
 
-	
-	process(clk, rxRdy, f0) -- Input from keyboard 
-	begin
-		if (rising_edge(clk)) then
-	
-			if ( rxRdy = '1' and state = HarmonicaState ) then -- f0 if key is pressed 
-			
-				if ( f0 = '0' ) then
+				if ( f0 = '0' ) then 
 					case scan is
-						when "00011100" => outputNote <= std_logic_vector(to_unsigned(5972, 16)); -- C
-						when "00011101" => outputNote <= std_logic_vector(to_unsigned(5637, 16)); -- C#
-						when "00011011" => outputNote <= std_logic_vector(to_unsigned(5322, 16)); -- D
-						when "00100100" => outputNote <= std_logic_vector(to_unsigned(5022, 16)); -- D#
-						when "00100011" => outputNote <= std_logic_vector(to_unsigned(4740, 16)); -- E
-						when "00101011" => outputNote <= std_logic_vector(to_unsigned(4474, 16)); -- F
-						when "00101100" => outputNote <= std_logic_vector(to_unsigned(4223, 16)); -- F#
-						when "00110100" => outputNote <= std_logic_vector(to_unsigned(3986, 16)); -- G
-						when "00110101" => outputNote <= std_logic_vector(to_unsigned(3762, 16)); -- G#
-						when "00110011" => outputNote <= std_logic_vector(to_unsigned(3551, 16)); -- A
-						when "00111100" => outputNote <= std_logic_vector(to_unsigned(3352, 16)); -- A#
-						when "00111011" => outputNote <= std_logic_vector(to_unsigned(3164, 16)); -- B
+						when "00011100" => inputNote <= std_logic_vector(to_unsigned(5972, 16)); -- C
+						when "00011101" => inputNote <= std_logic_vector(to_unsigned(5637, 16)); -- C#
+						when "00011011" => inputNote <= std_logic_vector(to_unsigned(5322, 16)); -- D
+						when "00100100" => inputNote <= std_logic_vector(to_unsigned(5022, 16)); -- D#
+						when "00100011" => inputNote <= std_logic_vector(to_unsigned(4740, 16)); -- E
+						when "00101011" => inputNote <= std_logic_vector(to_unsigned(4474, 16)); -- F
+						when "00101100" => inputNote <= std_logic_vector(to_unsigned(4223, 16)); -- F#
+						when "00110100" => inputNote <= std_logic_vector(to_unsigned(3986, 16)); -- G
+						when "00110101" => inputNote <= std_logic_vector(to_unsigned(3762, 16)); -- G#
+						when "00110011" => inputNote <= std_logic_vector(to_unsigned(3551, 16)); -- A
+						when "00111100" => inputNote <= std_logic_vector(to_unsigned(3352, 16)); -- A#
+						when "00111011" => inputNote <= std_logic_vector(to_unsigned(3164, 16)); -- B
 					
-						when others => outputNote <= std_logic_vector(to_unsigned(0, 16));
+						when others => inputNote <= std_logic_vector(to_unsigned(0, 16));
 					end case;
-				else
-					outputNote <= std_logic_vector(to_unsigned(0, 16));
+				elsif (state = HarmonicaState) then
+					inputNote <= std_logic_vector(to_unsigned(0, 16));
 				end if;
-			end if;
-		end if;
-	end process;
-	
-	
-	process(clk, rxRdy, f0) -- Input from keyboard 
-	begin
-		if (rising_edge(clk)) then
-			if ( f0 = '0' and rxRdy = '1' and state = InputNoteState) then -- f0 if key is pressed 
-				case scan is
-					when "00011100" => inputNote <= std_logic_vector(to_unsigned(5972, 16)); -- C
-					when "00011101" => inputNote <= std_logic_vector(to_unsigned(5637, 16)); -- C#
-					when "00011011" => inputNote <= std_logic_vector(to_unsigned(5322, 16)); -- D
-					when "00100100" => inputNote <= std_logic_vector(to_unsigned(5022, 16)); -- D#
-					when "00100011" => inputNote <= std_logic_vector(to_unsigned(4740, 16)); -- E
-					when "00101011" => inputNote <= std_logic_vector(to_unsigned(4474, 16)); -- F
-					when "00101100" => inputNote <= std_logic_vector(to_unsigned(4223, 16)); -- F#
-					when "00110100" => inputNote <= std_logic_vector(to_unsigned(3986, 16)); -- G
-					when "00110101" => inputNote <= std_logic_vector(to_unsigned(3762, 16)); -- G#
-					when "00110011" => inputNote <= std_logic_vector(to_unsigned(3551, 16)); -- A
-					when "00111100" => inputNote <= std_logic_vector(to_unsigned(3352, 16)); -- A#
-					when "00111011" => inputNote <= std_logic_vector(to_unsigned(3164, 16)); -- B
-				
-					when others => inputNote <= std_logic_vector(to_unsigned(0, 16));
-				end case;
-			elsif state = IncInputNoteState or state = PlayNoteState or state = GameoverState then
+			elsif state = IncInputState or state = PlayNoteState or state = GameoverState then
 				inputNote <= std_logic_vector(to_unsigned(0, 16));
 			end if;
 		end if;
@@ -265,7 +244,7 @@ begin
 			if (f0 = '0' and rxRdy = '1') then -- f0 if key is pressed 
 			
 				case scan is
-					when "00000101" => mode <= not mode;
+					when "00000101" => mode <= not mode; -- F1 key 
 					when others => mode <= mode;
 				end case;
 			end if;
@@ -277,7 +256,7 @@ begin
 							std_logic_vector(to_unsigned(3986, 16)) when InvalidNoteState,   -- error sound
 							std_logic_vector(to_unsigned(3164, 16)) when GameoverState,      -- gameover sound
 							inputNote 										 when InputNoteState,     -- input sound 
-							outputNote 										 when HarmonicaState,     -- harmonica sound 
+							inputNote 										 when HarmonicaState,     -- harmonica sound 
 							notes(noteIndex)	         	          when PlayNoteState,      -- from array sound
 							std_logic_vector(to_unsigned(0, 16))    when others;		        -- silence when any other state
 
