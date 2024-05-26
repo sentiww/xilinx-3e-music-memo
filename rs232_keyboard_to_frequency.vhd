@@ -66,7 +66,7 @@ architecture Behavioral of rs232_keyboard_to_frequency is
 	-- measure time 
 	signal counter : natural := 0; 
 	signal timeout : std_logic := '0';
-	constant MAX_COUNT : natural := 150000000; -- number of cycles in 3 seconds in 50 MHz clokc
+	constant MAX_COUNT : natural := 50000000; -- number of cycles in 3 seconds in 50 MHz clokc
 	
 	-- 0 - memo game
 	-- 1 - harmonica
@@ -85,61 +85,62 @@ begin
 	
 	process ( clk, state )
 	begin
-		if rising_edge(clk) and timeout = '1' then 
+		if rising_edge(clk) then 
 			nextState <= state;
+			
+			if mode = '1' then 
+				nextState <= HarmonicaState;
+			end if; 
 
-			case state is
-				when HarmonicaState => 
-					if mode = '1' then 
-						nextState <= HarmonicaState;
-					else 
+			if timeout = '1' and mode = '0' then
+				case state is
+					when HarmonicaState => 
 						nextState <= StartState;
-					end if; 
-
-				when StartState => 
-					nextState <= PlayNoteState;
-					
-				when PlayNoteState => 
-					if noteIndex < playedNoteIndex then
-						nextState <= SilenceState;
-					else
-						nextState <= IncPlayState;
-					end if;
-					
-				when IncPlayState => 
-					nextState <= InputNoteState;
 				
-				when InputNoteState =>  -- TODO if does not work => change from IncInputState to PlayNoteState
-					if inputNoteIndex < playedNoteIndex and to_integer(unsigned(inputNote)) = 0 then
-						nextState <= InputNoteState;
-					elsif inputNoteIndex < playedNoteIndex and to_integer(unsigned(inputNote)) > 0 then 
-						nextState <= ValidationNoteState;
-					elsif inputNoteIndex = notesCount - 1 then
-						nextState <= GameoverState;
-					elsif inputNoteIndex = playedNoteIndex then
+					when StartState => 
 						nextState <= PlayNoteState;
-					end if;
-				
-				when ValidationNoteState => 
-					if to_integer(unsigned(inputNote)) = to_integer(unsigned(notes(inputNoteIndex))) then 
-						nextState <= IncInputState;
-					else
-						nextState <= InvalidNoteState;
-					end if;
+						
+					when PlayNoteState => 
+						if noteIndex < playedNoteIndex then
+							nextState <= SilenceState;
+						else
+							nextState <= IncPlayState;
+						end if;
+						
+					when IncPlayState => 
+						nextState <= InputNoteState;
 					
-				when IncInputState => 
-					nextState <= InputNoteState;
+					when InputNoteState =>  -- TODO if does not work => change from IncInputState to PlayNoteState
+						if inputNoteIndex < playedNoteIndex and to_integer(unsigned(inputNote)) = 0 then
+							nextState <= InputNoteState;
+						elsif inputNoteIndex < playedNoteIndex and to_integer(unsigned(inputNote)) > 0 then 
+							nextState <= ValidationNoteState;
+						elsif inputNoteIndex = notesCount - 1 then
+							nextState <= GameoverState;
+						elsif inputNoteIndex = playedNoteIndex then
+							nextState <= PlayNoteState;
+						end if;
 					
-				when InvalidNoteState => 
-					nextState <= SilenceState;
-					
-				when SilenceState =>
-					nextState <= PlayNoteState;
-					
-				when GameoverState => 
-					nextState <= StartState;
-			end case;
-
+					when ValidationNoteState => 
+						if to_integer(unsigned(inputNote)) = to_integer(unsigned(notes(inputNoteIndex))) then 
+							nextState <= IncInputState;
+						else
+							nextState <= InvalidNoteState;
+						end if;
+						
+					when IncInputState => 
+						nextState <= InputNoteState;
+						
+					when InvalidNoteState => 
+						nextState <= SilenceState;
+						
+					when SilenceState =>
+						nextState <= PlayNoteState;
+						
+					when GameoverState => 
+						nextState <= StartState;
+				end case;
+			end if;
 		end if;
 	end process;
 	
