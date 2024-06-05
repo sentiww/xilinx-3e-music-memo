@@ -78,21 +78,21 @@ begin
 	process ( clk )
 	begin
 		if rising_edge( clk ) then
-			state <= nextState;
+			if	mode = '1' then
+				state <= HarmonicaState;
+			else 
+				state <= nextState;
+			end if;
 		end if;
 	end process;
 	
 	
 	process ( clk, state )
 	begin
-		if rising_edge(clk) then 
+		if rising_edge(clk) and timeout = '1' then 
 			nextState <= state;
 			
-			if mode = '1' then 
-				nextState <= HarmonicaState;
-			end if; 
-
-			if timeout = '1' and mode = '0' then
+			if mode = '0' then 
 				case state is
 					when HarmonicaState => 
 						nextState <= StartState;
